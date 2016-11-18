@@ -1,0 +1,13 @@
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\Asset.csprojResolveAssemblyReference.cache
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Admin.UserLogin.resources
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmMain.resources
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Login.resources
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\Asset.csproj.GenerateResource.Cache
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.AssetManagement.CreateAsset.resources
+D:\Asset_Project\AssetManagement\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.AssetManagement.AssetMovement.resources
