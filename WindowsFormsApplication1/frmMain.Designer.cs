@@ -135,6 +135,7 @@
             this.ViewAsset_Menu.Name = "ViewAsset_Menu";
             this.ViewAsset_Menu.Size = new System.Drawing.Size(116, 36);
             this.ViewAsset_Menu.Text = "View Asset";
+            this.ViewAsset_Menu.Click += new System.EventHandler(this.ViewAsset_Menu_Click);
             // 
             // CreateAsset
             // 

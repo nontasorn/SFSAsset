@@ -50,6 +50,12 @@
     <Compile Include="Admin\UserLogin.Designer.cs">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetManagement\AssetManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetManagement\AssetManagement.Designer.cs">
+      <DependentUpon>AssetManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssetManagement\AssetMovement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetManagement\AssetManagement.resx">
+      <DependentUpon>AssetManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AssetManagement\AssetMovement.resx">
       <DependentUpon>AssetMovement.cs</DependentUpon>
@@ -130,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Open-Folder-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

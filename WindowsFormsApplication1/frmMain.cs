@@ -38,5 +38,12 @@ namespace WindowsFormsApplication1
             lblUser.Text= DBConnString.sUserlogin;
             this.Activate();
         }
+
+        private void ViewAsset_Menu_Click(object sender, EventArgs e)
+        {
+            AssetManagement.AssetManagement frm = new AssetManagement.AssetManagement();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

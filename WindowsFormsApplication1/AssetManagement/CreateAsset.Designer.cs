@@ -56,29 +56,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.CreateAsset_Btn = new System.Windows.Forms.ToolStripButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtAssetMovementId = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Toolstrip_Create_User.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cboStatus);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.cboLocation);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.cboBase);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtAssetBrand);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtFixAssetNo);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.cboOwner);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtAssetDetails);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtRemarks);
             this.groupBox1.Controls.Add(this.txt_Sys_Asset);
             this.groupBox1.Controls.Add(this.dtExpireDate);
             this.groupBox1.Controls.Add(this.cboAssetType);
@@ -88,9 +82,9 @@
             this.groupBox1.Controls.Add(this.txtAssetNo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 94);
+            this.groupBox1.Location = new System.Drawing.Point(12, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 300);
+            this.groupBox1.Size = new System.Drawing.Size(960, 204);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Asset Details";
@@ -99,7 +93,7 @@
             // 
             this.cboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(188, 217);
+            this.cboStatus.Location = new System.Drawing.Point(178, 116);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(237, 24);
             this.cboStatus.TabIndex = 152;
@@ -108,7 +102,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label12.Location = new System.Drawing.Point(117, 217);
+            this.label12.Location = new System.Drawing.Point(107, 116);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 16);
             this.label12.TabIndex = 151;
@@ -118,7 +112,7 @@
             // 
             this.cboLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboLocation.FormattingEnabled = true;
-            this.cboLocation.Location = new System.Drawing.Point(717, 180);
+            this.cboLocation.Location = new System.Drawing.Point(707, 79);
             this.cboLocation.Name = "cboLocation";
             this.cboLocation.Size = new System.Drawing.Size(154, 24);
             this.cboLocation.TabIndex = 150;
@@ -127,7 +121,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label11.Location = new System.Drawing.Point(643, 183);
+            this.label11.Location = new System.Drawing.Point(633, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 16);
             this.label11.TabIndex = 149;
@@ -137,7 +131,7 @@
             // 
             this.cboBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboBase.FormattingEnabled = true;
-            this.cboBase.Location = new System.Drawing.Point(505, 180);
+            this.cboBase.Location = new System.Drawing.Point(495, 79);
             this.cboBase.Name = "cboBase";
             this.cboBase.Size = new System.Drawing.Size(115, 24);
             this.cboBase.TabIndex = 148;
@@ -146,7 +140,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label9.Location = new System.Drawing.Point(450, 183);
+            this.label9.Location = new System.Drawing.Point(440, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 16);
             this.label9.TabIndex = 147;
@@ -206,7 +200,7 @@
             // 
             this.cboOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboOwner.FormattingEnabled = true;
-            this.cboOwner.Location = new System.Drawing.Point(188, 180);
+            this.cboOwner.Location = new System.Drawing.Point(178, 79);
             this.cboOwner.Name = "cboOwner";
             this.cboOwner.Size = new System.Drawing.Size(234, 24);
             this.cboOwner.TabIndex = 139;
@@ -215,7 +209,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(118, 183);
+            this.label5.Location = new System.Drawing.Point(108, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 138;
@@ -245,7 +239,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(101, 254);
+            this.label4.Location = new System.Drawing.Point(91, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 135;
@@ -255,7 +249,7 @@
             // 
             this.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRemarks.Location = new System.Drawing.Point(188, 254);
+            this.txtRemarks.Location = new System.Drawing.Point(178, 153);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRemarks.Size = new System.Drawing.Size(683, 22);
@@ -360,11 +354,57 @@
             this.CreateAsset_Btn.Text = "Create Asset";
             this.CreateAsset_Btn.Click += new System.EventHandler(this.CreateAsset_Btn_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.txtAssetMovementId);
+            this.groupBox2.Controls.Add(this.cboStatus);
+            this.groupBox2.Controls.Add(this.cboOwner);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtRemarks);
+            this.groupBox2.Controls.Add(this.cboLocation);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.cboBase);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(12, 314);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(960, 217);
+            this.groupBox2.TabIndex = 23;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Asset Location";
+            // 
+            // txtAssetMovementId
+            // 
+            this.txtAssetMovementId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtAssetMovementId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAssetMovementId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAssetMovementId.ForeColor = System.Drawing.Color.Red;
+            this.txtAssetMovementId.Location = new System.Drawing.Point(178, 40);
+            this.txtAssetMovementId.Name = "txtAssetMovementId";
+            this.txtAssetMovementId.ReadOnly = true;
+            this.txtAssetMovementId.Size = new System.Drawing.Size(153, 22);
+            this.txtAssetMovementId.TabIndex = 153;
+            this.txtAssetMovementId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(49, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 16);
+            this.label13.TabIndex = 147;
+            this.label13.Text = "Asset Move No  :";
+            // 
             // CreateAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Toolstrip_Create_User);
             this.Controls.Add(this.groupBox1);
             this.Name = "CreateAsset";
@@ -375,6 +415,8 @@
             this.groupBox1.PerformLayout();
             this.Toolstrip_Create_User.ResumeLayout(false);
             this.Toolstrip_Create_User.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,5 +452,8 @@
         private System.Windows.Forms.ComboBox cboStatus;
         private System.Windows.Forms.ToolStrip Toolstrip_Create_User;
         private System.Windows.Forms.ToolStripButton CreateAsset_Btn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtAssetMovementId;
     }
 }

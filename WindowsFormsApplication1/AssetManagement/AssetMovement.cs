@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1.AssetManagement
         {
             InitializeComponent();
         }
+
+        private void CreateAsset_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
