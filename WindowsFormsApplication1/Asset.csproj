@@ -68,6 +68,12 @@
     <Compile Include="AssetManagement\CreateAsset.Designer.cs">
       <DependentUpon>CreateAsset.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetManagement\ViewAssetDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetManagement\ViewAssetDetails.Designer.cs">
+      <DependentUpon>ViewAssetDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\clsDatabase.cs" />
     <Compile Include="Class\DBConnString.cs" />
     <Compile Include="frmMain.cs">
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssetManagement\CreateAsset.resx">
       <DependentUpon>CreateAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetManagement\ViewAssetDetails.resx">
+      <DependentUpon>ViewAssetDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

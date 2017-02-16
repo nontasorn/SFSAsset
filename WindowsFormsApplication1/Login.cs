@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
         CryptoStream cs;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-                DBConnString.strConn = "Data Source=192.168.1.13;Initial Catalog=ASSET; Persist Security Info=True;User ID=sa;Password=";
+            DBConnString.strConn = "Data Source=192.168.1.13;Initial Catalog=ASSET; Persist Security Info=True;User ID=sa;Password=Ye11@wwin9";
                 DBConnString.clsDB = new clsDatabase(DBConnString.strConn, DBConnString.sServer);
                 string strConn;
                 strConn = DBConnString.strConn;

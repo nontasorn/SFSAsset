@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1.AssetManagement
             Conn.ConnectionString = strConn;
             Conn.Open();
             userId = DBConnString.sUserIdLogin;
-            Max_Asset_No_System();
+            
             Max_Asset_Movement();
 
             cmb_AssetType();
@@ -47,6 +47,7 @@ namespace WindowsFormsApplication1.AssetManagement
             cmb_Location();
             cmb_Status();
             cmb_OWNER();
+            Max_Asset_No_System();
         }
         private void cmb_Status()
         {
@@ -138,7 +139,7 @@ namespace WindowsFormsApplication1.AssetManagement
             }
             Sdr.Close();
         }
-        
+
         private void cmb_Location()
         {
             Sbd = new StringBuilder();
@@ -242,14 +243,14 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("Asset_Type,");
                     Sbd.Append("Asset_Brand,");
                     Sbd.Append("Asset_Purchase,");
-                    Sbd.Append("Asste_Expire_Date,");                
+                    Sbd.Append("Asste_Expire_Date,");
                     Sbd.Append("Remarks,");
                     Sbd.Append("Create_By,");
                     Sbd.Append("Create_Date,");
                     Sbd.Append("Modified_By,");
                     Sbd.Append("Modified_Date,");
                     Sbd.Append("Amend)");
-                 
+
 
                     Sbd.Append("VALUES ");
 
@@ -284,7 +285,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.Parameters.Add("@Asset_Brand", SqlDbType.NVarChar).Value = txtAssetBrand.Text.Trim(); ;
                     Cmd.Parameters.Add("@Asset_Purchase", SqlDbType.DateTime).Value = dtPurchaseDate.Value.ToShortDateString();
                     Cmd.Parameters.Add("@Asste_Expire_Date", SqlDbType.DateTime).Value = dtExpireDate.Value.ToShortDateString();
-                    
+
                     Cmd.Parameters.Add("@Remarks", SqlDbType.NVarChar).Value = txtRemarks.Text.Trim();
                     Cmd.Parameters.Add("@Create_By", SqlDbType.NChar).Value = userId;
                     Cmd.Parameters.Add("@Create_Date", SqlDbType.DateTime).Value = DateTime.Now;
@@ -377,34 +378,37 @@ namespace WindowsFormsApplication1.AssetManagement
         }
 
         private void Max_Asset_No_System()
-        {
-            Sbd = new StringBuilder();
-            Sbd.Remove(0, Sbd.Length);
-            Sbd.Append("SELECT MAX(Asset_No_System) AS Asset_No_System FROM Asset");
-            String sqlMaxStatementIndex;
-            sqlMaxStatementIndex = Sbd.ToString();
-            Cmd = new SqlCommand();
-            Cmd.CommandText = sqlMaxStatementIndex;
-            Cmd.CommandType = CommandType.Text;
-            Cmd.Connection = Conn;
-            string id = Cmd.ExecuteScalar().ToString();
+         {
+             Sbd = new StringBuilder();
+             Sbd.Remove(0, Sbd.Length);
+             Sbd.Append("SELECT MAX(SUBSTRING(Asset_No_System,1,2)) AS Asset_No_System FROM Asset");
+            // SELECT MAX(SUBSTRING(MElement_Id,4,6)) AS MElement_Id FROM Main_Element
 
-            if (id == "")
-            {
-                AssetId = 0;
-            }
-            else
-            {
-                AssetId = Convert.ToInt32(id.ToString());
-                AssetId++;
-            }
-            //string strMax = "";
-            //strMax = String.Format("{0:0000}", Convert.ToInt16(AssetId.ToString()));
-            //txtAssignID.Text = "ASS" + DateTime.Now.ToString("yy") + DateTime.Now.ToString("MM") + strMax;
-            txt_Sys_Asset.Text = AssetId.ToString().Trim();
-            Cmd.Parameters.Clear();
+             String sqlMaxStatementIndex;
+             sqlMaxStatementIndex = Sbd.ToString();
+             Cmd = new SqlCommand();
+             Cmd.CommandText = sqlMaxStatementIndex;
+             Cmd.CommandType = CommandType.Text;
+             Cmd.Connection = Conn;
+             string id = Cmd.ExecuteScalar().ToString();
 
-        }
+             if (id == "")
+             {
+                 AssetId = 1;
+             }
+             else
+             {
+                 AssetId = Convert.ToInt32(id.ToString());
+                 AssetId++;
+             }
+             string strMax = "";
+             strMax = String.Format("{0:0000}", Convert.ToInt16(AssetId.ToString()));
+             txt_Sys_Asset.Text = "ASS" + DateTime.Now.ToString("yy") + DateTime.Now.ToString("MM") + strMax;
+             //txt_Sys_Asset.Text = AssetId.ToString().Trim();
+             Cmd.Parameters.Clear();
+
+         }
+         
         private void Max_Asset_Movement()
         {
             Sbd = new StringBuilder();
@@ -430,7 +434,7 @@ namespace WindowsFormsApplication1.AssetManagement
             string strMax = "";
             strMax = String.Format("{0:0000}", Convert.ToInt16(AssetMovementId.ToString()));
             txtAssetMovementId.Text = "M" + DateTime.Now.ToString("yy") + DateTime.Now.ToString("MM") + strMax;
-            
+
             Cmd.Parameters.Clear();
         }
 
