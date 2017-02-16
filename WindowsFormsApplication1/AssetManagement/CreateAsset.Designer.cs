@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboStatus = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cboLocation = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cboBase = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtAssetBrand = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFixAssetNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboOwner = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtAssetDetails = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.txt_Sys_Asset = new System.Windows.Forms.TextBox();
             this.dtExpireDate = new System.Windows.Forms.DateTimePicker();
             this.cboAssetType = new System.Windows.Forms.ComboBox();
@@ -54,11 +44,25 @@
             this.dtPurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.txtAssetNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cboLocation = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cboBase = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboOwner = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.CreateAsset_Btn = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtAssetMovementId = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtAssetMovementId = new System.Windows.Forms.TextBox();
+            this.txtKasperskyVersion = new System.Windows.Forms.TextBox();
+            this.txtcomputerName = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Toolstrip_Create_User.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,7 +75,9 @@
             this.groupBox1.Controls.Add(this.txtFixAssetNo);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtRemarks);
             this.groupBox1.Controls.Add(this.txtAssetDetails);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txt_Sys_Asset);
             this.groupBox1.Controls.Add(this.dtExpireDate);
@@ -82,69 +88,12 @@
             this.groupBox1.Controls.Add(this.txtAssetNo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 72);
+            this.groupBox1.Location = new System.Drawing.Point(12, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 204);
+            this.groupBox1.Size = new System.Drawing.Size(960, 309);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Asset Details";
-            // 
-            // cboStatus
-            // 
-            this.cboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(178, 116);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(237, 24);
-            this.cboStatus.TabIndex = 152;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label12.Location = new System.Drawing.Point(107, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 16);
-            this.label12.TabIndex = 151;
-            this.label12.Text = "Status :";
-            // 
-            // cboLocation
-            // 
-            this.cboLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboLocation.FormattingEnabled = true;
-            this.cboLocation.Location = new System.Drawing.Point(707, 79);
-            this.cboLocation.Name = "cboLocation";
-            this.cboLocation.Size = new System.Drawing.Size(154, 24);
-            this.cboLocation.TabIndex = 150;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label11.Location = new System.Drawing.Point(633, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 16);
-            this.label11.TabIndex = 149;
-            this.label11.Text = "Location  :";
-            // 
-            // cboBase
-            // 
-            this.cboBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboBase.FormattingEnabled = true;
-            this.cboBase.Location = new System.Drawing.Point(495, 79);
-            this.cboBase.Name = "cboBase";
-            this.cboBase.Size = new System.Drawing.Size(115, 24);
-            this.cboBase.TabIndex = 148;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label9.Location = new System.Drawing.Point(440, 82);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
-            this.label9.TabIndex = 147;
-            this.label9.Text = "Base  :";
             // 
             // txtAssetBrand
             // 
@@ -196,25 +145,6 @@
             this.label6.TabIndex = 140;
             this.label6.Text = "Fixed Asset No  :";
             // 
-            // cboOwner
-            // 
-            this.cboOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboOwner.FormattingEnabled = true;
-            this.cboOwner.Location = new System.Drawing.Point(178, 79);
-            this.cboOwner.Name = "cboOwner";
-            this.cboOwner.Size = new System.Drawing.Size(234, 24);
-            this.cboOwner.TabIndex = 139;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(108, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
-            this.label5.TabIndex = 138;
-            this.label5.Text = "Owner :";
-            // 
             // txtAssetDetails
             // 
             this.txtAssetDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -234,26 +164,6 @@
             this.label8.Size = new System.Drawing.Size(93, 16);
             this.label8.TabIndex = 136;
             this.label8.Text = "Asset Details :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(91, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
-            this.label4.TabIndex = 135;
-            this.label4.Text = "Remarks :";
-            // 
-            // txtRemarks
-            // 
-            this.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRemarks.Location = new System.Drawing.Point(178, 153);
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtRemarks.Size = new System.Drawing.Size(683, 22);
-            this.txtRemarks.TabIndex = 134;
             // 
             // txt_Sys_Asset
             // 
@@ -333,6 +243,102 @@
             this.label7.TabIndex = 125;
             this.label7.Text = "Asset No  :";
             // 
+            // cboStatus
+            // 
+            this.cboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Location = new System.Drawing.Point(178, 116);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(237, 24);
+            this.cboStatus.TabIndex = 152;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label12.Location = new System.Drawing.Point(107, 116);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 16);
+            this.label12.TabIndex = 151;
+            this.label12.Text = "Status :";
+            // 
+            // cboLocation
+            // 
+            this.cboLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cboLocation.FormattingEnabled = true;
+            this.cboLocation.Location = new System.Drawing.Point(707, 79);
+            this.cboLocation.Name = "cboLocation";
+            this.cboLocation.Size = new System.Drawing.Size(154, 24);
+            this.cboLocation.TabIndex = 150;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label11.Location = new System.Drawing.Point(633, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 16);
+            this.label11.TabIndex = 149;
+            this.label11.Text = "Location  :";
+            // 
+            // cboBase
+            // 
+            this.cboBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cboBase.FormattingEnabled = true;
+            this.cboBase.Location = new System.Drawing.Point(495, 79);
+            this.cboBase.Name = "cboBase";
+            this.cboBase.Size = new System.Drawing.Size(115, 24);
+            this.cboBase.TabIndex = 148;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label9.Location = new System.Drawing.Point(440, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 16);
+            this.label9.TabIndex = 147;
+            this.label9.Text = "Base  :";
+            // 
+            // cboOwner
+            // 
+            this.cboOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cboOwner.FormattingEnabled = true;
+            this.cboOwner.Location = new System.Drawing.Point(178, 79);
+            this.cboOwner.Name = "cboOwner";
+            this.cboOwner.Size = new System.Drawing.Size(234, 24);
+            this.cboOwner.TabIndex = 139;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label5.Location = new System.Drawing.Point(108, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 16);
+            this.label5.TabIndex = 138;
+            this.label5.Text = "Owner :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label4.Location = new System.Drawing.Point(101, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.TabIndex = 135;
+            this.label4.Text = "Remarks :";
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtRemarks.Location = new System.Drawing.Point(188, 183);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtRemarks.Size = new System.Drawing.Size(683, 22);
+            this.txtRemarks.TabIndex = 134;
+            // 
             // Toolstrip_Create_User
             // 
             this.Toolstrip_Create_User.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -361,20 +367,28 @@
             this.groupBox2.Controls.Add(this.cboStatus);
             this.groupBox2.Controls.Add(this.cboOwner);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtRemarks);
             this.groupBox2.Controls.Add(this.cboLocation);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.cboBase);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(12, 314);
+            this.groupBox2.Location = new System.Drawing.Point(12, 375);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(960, 217);
+            this.groupBox2.Size = new System.Drawing.Size(960, 166);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Asset Location";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(49, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 16);
+            this.label13.TabIndex = 147;
+            this.label13.Text = "Asset Move No  :";
             // 
             // txtAssetMovementId
             // 
@@ -389,23 +403,57 @@
             this.txtAssetMovementId.TabIndex = 153;
             this.txtAssetMovementId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label13
+            // txtKasperskyVersion
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(49, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 16);
-            this.label13.TabIndex = 147;
-            this.label13.Text = "Asset Move No  :";
+            this.txtKasperskyVersion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKasperskyVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtKasperskyVersion.Location = new System.Drawing.Point(200, 308);
+            this.txtKasperskyVersion.Name = "txtKasperskyVersion";
+            this.txtKasperskyVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtKasperskyVersion.Size = new System.Drawing.Size(237, 22);
+            this.txtKasperskyVersion.TabIndex = 160;
+            // 
+            // txtcomputerName
+            // 
+            this.txtcomputerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcomputerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtcomputerName.Location = new System.Drawing.Point(200, 268);
+            this.txtcomputerName.Name = "txtcomputerName";
+            this.txtcomputerName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtcomputerName.Size = new System.Drawing.Size(237, 22);
+            this.txtcomputerName.TabIndex = 159;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label14.Location = new System.Drawing.Point(55, 308);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(127, 16);
+            this.label14.TabIndex = 158;
+            this.label14.Text = "Kaspersky Version :";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label15.Location = new System.Drawing.Point(70, 268);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 16);
+            this.label15.TabIndex = 157;
+            this.label15.Text = "Computer Name :";
             // 
             // CreateAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.txtKasperskyVersion);
+            this.Controls.Add(this.txtcomputerName);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.Toolstrip_Create_User);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox1);
             this.Name = "CreateAsset";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -455,5 +503,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtAssetMovementId;
+        private System.Windows.Forms.TextBox txtKasperskyVersion;
+        private System.Windows.Forms.TextBox txtcomputerName;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }
