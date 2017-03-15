@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFixAssetNo = new System.Windows.Forms.TextBox();
             this.txt_Sys_Asset = new System.Windows.Forms.TextBox();
-            this.txtAssetNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.CreateAsset_Btn = new System.Windows.Forms.ToolStripButton();
@@ -58,6 +57,7 @@
             this.cboOwner = new System.Windows.Forms.ComboBox();
             this.cboBase = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtAssetNo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.Toolstrip_Create_User.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,6 +65,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtAssetNo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtRemark);
             this.groupBox1.Controls.Add(this.label4);
@@ -79,7 +80,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtFixAssetNo);
             this.groupBox1.Controls.Add(this.txt_Sys_Asset);
-            this.groupBox1.Controls.Add(this.txtAssetNo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(12, 58);
@@ -246,22 +246,12 @@
             this.txt_Sys_Asset.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Sys_Asset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txt_Sys_Asset.ForeColor = System.Drawing.Color.Red;
-            this.txt_Sys_Asset.Location = new System.Drawing.Point(367, 41);
+            this.txt_Sys_Asset.Location = new System.Drawing.Point(183, 41);
             this.txt_Sys_Asset.Name = "txt_Sys_Asset";
             this.txt_Sys_Asset.ReadOnly = true;
-            this.txt_Sys_Asset.Size = new System.Drawing.Size(80, 22);
+            this.txt_Sys_Asset.Size = new System.Drawing.Size(99, 22);
             this.txt_Sys_Asset.TabIndex = 134;
             this.txt_Sys_Asset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAssetNo
-            // 
-            this.txtAssetNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAssetNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAssetNo.Location = new System.Drawing.Point(184, 41);
-            this.txtAssetNo.Name = "txtAssetNo";
-            this.txtAssetNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAssetNo.Size = new System.Drawing.Size(177, 22);
-            this.txtAssetNo.TabIndex = 127;
             // 
             // label7
             // 
@@ -410,6 +400,19 @@
             this.label6.TabIndex = 157;
             this.label6.Text = "Base  :";
             // 
+            // txtAssetNo
+            // 
+            this.txtAssetNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtAssetNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAssetNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAssetNo.ForeColor = System.Drawing.Color.Red;
+            this.txtAssetNo.Location = new System.Drawing.Point(288, 41);
+            this.txtAssetNo.Name = "txtAssetNo";
+            this.txtAssetNo.ReadOnly = true;
+            this.txtAssetNo.Size = new System.Drawing.Size(159, 22);
+            this.txtAssetNo.TabIndex = 159;
+            this.txtAssetNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // AssetMovement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +423,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AssetMovement";
             this.Text = "AssetMovement";
+            this.Load += new System.EventHandler(this.AssetMovement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Toolstrip_Create_User.ResumeLayout(false);
@@ -437,7 +441,6 @@
         private System.Windows.Forms.ToolStrip Toolstrip_Create_User;
         private System.Windows.Forms.ToolStripButton CreateAsset_Btn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtAssetNo;
         private System.Windows.Forms.TextBox txtFixAssetNo;
         private System.Windows.Forms.TextBox txt_Sys_Asset;
         private System.Windows.Forms.Label label1;
@@ -463,5 +466,6 @@
         private System.Windows.Forms.ComboBox cboOwner;
         private System.Windows.Forms.ComboBox cboBase;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtAssetNo;
     }
 }

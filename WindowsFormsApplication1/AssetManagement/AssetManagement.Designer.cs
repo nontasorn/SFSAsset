@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.EditAsset_Btn = new System.Windows.Forms.ToolStripButton();
-            this.Refresh_Btn = new System.Windows.Forms.ToolStripButton();
+            this.AssetMovement_Btn = new System.Windows.Forms.ToolStripButton();
             this.dgv_ViewAsset = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_ViewAssetMovement = new System.Windows.Forms.DataGridView();
             this.lbl_Asset_Count = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.Toolstrip_Create_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ViewAsset)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -49,7 +50,8 @@
             this.Toolstrip_Create_User.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.Toolstrip_Create_User.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.EditAsset_Btn,
-            this.Refresh_Btn});
+            this.toolStripButton1,
+            this.AssetMovement_Btn});
             this.Toolstrip_Create_User.Location = new System.Drawing.Point(0, 0);
             this.Toolstrip_Create_User.Name = "Toolstrip_Create_User";
             this.Toolstrip_Create_User.Size = new System.Drawing.Size(984, 39);
@@ -65,14 +67,15 @@
             this.EditAsset_Btn.Size = new System.Drawing.Size(110, 36);
             this.EditAsset_Btn.Text = "Edit Asset";
             // 
-            // Refresh_Btn
+            // AssetMovement_Btn
             // 
-            this.Refresh_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Refresh_Btn.Image = global::WindowsFormsApplication1.Properties.Resources.refresh;
-            this.Refresh_Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Refresh_Btn.Name = "Refresh_Btn";
-            this.Refresh_Btn.Size = new System.Drawing.Size(96, 36);
-            this.Refresh_Btn.Text = "Refresh";
+            this.AssetMovement_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssetMovement_Btn.Image = global::WindowsFormsApplication1.Properties.Resources.Open_Folder_Add_icon;
+            this.AssetMovement_Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AssetMovement_Btn.Name = "AssetMovement_Btn";
+            this.AssetMovement_Btn.Size = new System.Drawing.Size(155, 36);
+            this.AssetMovement_Btn.Text = "Asset Movement";
+            this.AssetMovement_Btn.Click += new System.EventHandler(this.AssetMovement_Btn_Click);
             // 
             // dgv_ViewAsset
             // 
@@ -87,16 +90,17 @@
             this.dgv_ViewAsset.MultiSelect = false;
             this.dgv_ViewAsset.Name = "dgv_ViewAsset";
             this.dgv_ViewAsset.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgv_ViewAsset.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgv_ViewAsset.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_ViewAsset.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_ViewAsset.Size = new System.Drawing.Size(978, 306);
             this.dgv_ViewAsset.TabIndex = 24;
+            this.dgv_ViewAsset.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ViewAsset_CellMouseUp);
             // 
             // tableLayoutPanel1
             // 
@@ -131,13 +135,13 @@
             this.dgv_ViewAssetMovement.MultiSelect = false;
             this.dgv_ViewAssetMovement.Name = "dgv_ViewAssetMovement";
             this.dgv_ViewAssetMovement.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgv_ViewAssetMovement.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgv_ViewAssetMovement.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_ViewAssetMovement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_ViewAssetMovement.Size = new System.Drawing.Size(978, 158);
             this.dgv_ViewAssetMovement.TabIndex = 25;
@@ -168,6 +172,15 @@
             this.label1.Text = "Asset Movement : ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = global::WindowsFormsApplication1.Properties.Resources.refresh;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(96, 36);
+            this.toolStripButton1.Text = "Refresh";
+            // 
             // AssetManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,11 +206,12 @@
 
         private System.Windows.Forms.ToolStrip Toolstrip_Create_User;
         private System.Windows.Forms.ToolStripButton EditAsset_Btn;
-        private System.Windows.Forms.ToolStripButton Refresh_Btn;
+        private System.Windows.Forms.ToolStripButton AssetMovement_Btn;
         private System.Windows.Forms.DataGridView dgv_ViewAsset;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dgv_ViewAssetMovement;
         internal System.Windows.Forms.Label lbl_Asset_Count;
         internal System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
