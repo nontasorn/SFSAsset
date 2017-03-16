@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1.AssetManagement
                 return;
             }
             AssetId = dgv_ViewAsset.Rows[e.RowIndex].Cells[0].Value.ToString();
-            
+            MessageBox.Show(AssetId);
             DataDetail();
         }
         private void DataDetail()
@@ -129,6 +129,7 @@ namespace WindowsFormsApplication1.AssetManagement
                 dgv_ViewAssetMovement.DataSource = dt;
                 //CheckResult = dt.Rows.Count;
                 //HeadDetail();
+                MessageBox.Show("111111111");
             }
             else
             {

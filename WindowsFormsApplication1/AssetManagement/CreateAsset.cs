@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.AssetManagement
             Conn.Open();
             userId = DBConnString.sUserIdLogin;
             
-            Max_Asset_Movement();
+            
 
             cmb_AssetType();
             cmb_Base();
@@ -48,6 +48,7 @@ namespace WindowsFormsApplication1.AssetManagement
             cmb_Status();
             cmb_OWNER();
             Max_Asset_No_System();
+            Max_Asset_Movement();
         }
         private void cmb_Status()
         {
@@ -236,6 +237,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd = new StringBuilder();
                     Sbd.Remove(0, Sbd.Length);
                     Sbd.Append("INSERT INTO Asset ");
+                    
                     Sbd.Append("(Asset_No_System,");
                     Sbd.Append("Asset_No,");
                     Sbd.Append("Fixed_Asset_No,");
@@ -249,11 +251,12 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("Create_Date,");
                     Sbd.Append("Modified_By,");
                     Sbd.Append("Modified_Date,");
+                    Sbd.Append("Asset_Status,");
                     Sbd.Append("Amend)");
 
 
                     Sbd.Append("VALUES ");
-
+                    
                     Sbd.Append("(@Asset_No_System,");
                     Sbd.Append("@Asset_No,");
                     Sbd.Append("@Fixed_Asset_No,");
@@ -267,6 +270,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("@Create_Date,");
                     Sbd.Append("@Modified_By,");
                     Sbd.Append("@Modified_Date,");
+                    Sbd.Append("@Asset_Status,");
                     Sbd.Append("@Amend)");
                     sqlSaveStHead = Sbd.ToString();
 
@@ -275,8 +279,9 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.Transaction = Tr;
                     Cmd.CommandText = sqlSaveStHead;
 
-
-                    Cmd.Parameters.Add("@Asset_No_System", SqlDbType.Int).Value = txt_Sys_Asset.Text.Trim();
+                    Cmd.Parameters.Add("@Asset_Movement_Id", SqlDbType.NVarChar).Value = txtAssetMovementId.Text.Trim();
+                    
+                    Cmd.Parameters.Add("@Asset_No_System", SqlDbType.NVarChar).Value = txt_Sys_Asset.Text.Trim();
                     Cmd.Parameters.Add("@Asset_No", SqlDbType.NVarChar).Value = txtAssetNo.Text.Trim();
 
                     Cmd.Parameters.Add("@Fixed_Asset_No", SqlDbType.NVarChar).Value = txtFixAssetNo.Text.Trim();
@@ -291,6 +296,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.Parameters.Add("@Create_Date", SqlDbType.DateTime).Value = DateTime.Now;
                     Cmd.Parameters.Add("@Modified_By", SqlDbType.NChar).Value = userId;
                     Cmd.Parameters.Add("@Modified_Date", SqlDbType.DateTime).Value = DateTime.Now;
+                    Cmd.Parameters.Add("@Asset_Status", SqlDbType.NChar).Value = cboStatus.SelectedValue.ToString();
                     Cmd.Parameters.Add("@Amend", SqlDbType.Int).Value = 0;
 
                     Cmd.ExecuteNonQuery();
@@ -342,7 +348,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.CommandText = sqlSaveStHead;
 
                     Cmd.Parameters.Add("@Asset_Movement_Id", SqlDbType.NVarChar).Value = txtAssetMovementId.Text.Trim();
-                    Cmd.Parameters.Add("@Asset_No_System", SqlDbType.Int).Value = txt_Sys_Asset.Text.Trim();
+                    Cmd.Parameters.Add("@Asset_No_System", SqlDbType.NVarChar).Value = txt_Sys_Asset.Text.Trim();
                     Cmd.Parameters.Add("@Asset_No", SqlDbType.NVarChar).Value = txtAssetNo.Text.Trim();
                     Cmd.Parameters.Add("@Fixed_Asset_No", SqlDbType.NVarChar).Value = txtFixAssetNo.Text.Trim();
                     Cmd.Parameters.Add("@From_Owner", SqlDbType.NChar).Value = cboOwner.SelectedValue.ToString();
@@ -363,7 +369,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     MessageBox.Show("Record asset successfully", "Asset Management Message", MessageBoxButtons.OK, MessageBoxIcon.None);
                     Tr.Commit();
 
-                    //ClearDetails();
+                    ClearDetails();
                     Max_Asset_No_System(); // max ID
                     Max_Asset_Movement(); // max asset movement
                     //DataHead_Grade(); // show all grade details
@@ -376,12 +382,26 @@ namespace WindowsFormsApplication1.AssetManagement
                 }
             }
         }
+        private void ClearDetails()
+        {
+            txtAssetNo.Text = "";
+            txtAssetBrand.Text = "";
+            txtAssetDetails.Text = "";
+            txtcomputerName.Text = "";
+            txtFixAssetNo.Text = "";
+            txtKasperskyVersion.Text = "";
+            txtRemarks.Text = "";
+            
+
+
+
+        }
 
         private void Max_Asset_No_System()
          {
              Sbd = new StringBuilder();
              Sbd.Remove(0, Sbd.Length);
-             Sbd.Append("SELECT MAX(SUBSTRING(Asset_No_System,1,2)) AS Asset_No_System FROM Asset");
+             Sbd.Append("SELECT MAX(SUBSTRING(Asset_No_System,8,5)) AS Asset_No_System FROM Asset");
             // SELECT MAX(SUBSTRING(MElement_Id,4,6)) AS MElement_Id FROM Main_Element
 
              String sqlMaxStatementIndex;
@@ -413,7 +433,7 @@ namespace WindowsFormsApplication1.AssetManagement
         {
             Sbd = new StringBuilder();
             Sbd.Remove(0, Sbd.Length);
-            Sbd.Append("SELECT MAX(Asset_No_System) AS Asset_No_System FROM Asset_Movement");
+            Sbd.Append("SELECT MAX(SUBSTRING(Asset_Movement_Id,6,8)) AS Asset_No_System FROM Asset_Movement");
             String sqlMaxStatementIndex;
             sqlMaxStatementIndex = Sbd.ToString();
             Cmd = new SqlCommand();
@@ -424,7 +444,7 @@ namespace WindowsFormsApplication1.AssetManagement
 
             if (id == "")
             {
-                AssetMovementId = 0;
+                AssetMovementId = 1;
             }
             else
             {
