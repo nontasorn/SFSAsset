@@ -252,6 +252,9 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("Modified_By,");
                     Sbd.Append("Modified_Date,");
                     Sbd.Append("Asset_Status,");
+                    Sbd.Append("Base,");
+                    Sbd.Append("Location,");
+                    Sbd.Append("Owner,");
                     Sbd.Append("Amend)");
 
 
@@ -271,6 +274,9 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("@Modified_By,");
                     Sbd.Append("@Modified_Date,");
                     Sbd.Append("@Asset_Status,");
+                    Sbd.Append("@Base,");
+                    Sbd.Append("@Location,");
+                    Sbd.Append("@Owner,");
                     Sbd.Append("@Amend)");
                     sqlSaveStHead = Sbd.ToString();
 
@@ -298,6 +304,9 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.Parameters.Add("@Modified_Date", SqlDbType.DateTime).Value = DateTime.Now;
                     Cmd.Parameters.Add("@Asset_Status", SqlDbType.NChar).Value = cboStatus.SelectedValue.ToString();
                     Cmd.Parameters.Add("@Amend", SqlDbType.Int).Value = 0;
+                    Cmd.Parameters.Add("@Owner", SqlDbType.NChar).Value = cboOwner.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@Base", SqlDbType.NChar).Value = cboBase.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@Location", SqlDbType.NChar).Value = cboLocation.SelectedValue.ToString();
 
                     Cmd.ExecuteNonQuery();
 

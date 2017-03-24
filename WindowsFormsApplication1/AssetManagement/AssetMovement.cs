@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1.AssetManagement
         SqlDataReader Sdr;
         DataTable dt;
         SqlTransaction Tr;
+        int AssetMovementId;
 
         internal string MovementID // this value for edit
         {
@@ -34,7 +35,124 @@ namespace WindowsFormsApplication1.AssetManagement
 
         private void CreateAsset_Btn_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure to movement asset       " + txtAssetNo.Text.Trim() + " yes/no?", "Asset Management Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
 
+                Tr = Conn.BeginTransaction();
+                try
+                {
+                    string sqlSaveStHead;
+                    Sbd = new StringBuilder();
+                    Sbd.Remove(0, Sbd.Length);
+                    Sbd.Append("UPDATE Asset ");
+                    Sbd.Append("SET Owner = @To_Owner,");
+                    Sbd.Append("Base = @To_Base,");
+                    Sbd.Append("Location = @To_Location,");
+                    Sbd.Append("Asset_Status = @To_Status, ");
+                    Sbd.Append("Modified_By = @Modified_By, ");
+                    Sbd.Append("Modified_Date = @Modified_Date, ");
+                    Sbd.Append("Amend = @Amend ");
+                    Sbd.Append("WHERE  Asset_No_System = @Asset_No_System");
+                    
+                    sqlSaveStHead = Sbd.ToString();
+
+
+                    Cmd.Parameters.Clear();
+                    Cmd.Transaction = Tr;
+                    Cmd.CommandText = sqlSaveStHead;
+
+                    Cmd.Parameters.Add("@To_Owner", SqlDbType.NChar).Value = cboOwner.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Base", SqlDbType.NChar).Value = cboBase.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Location", SqlDbType.NChar).Value = cboLocation.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Status", SqlDbType.NChar).Value = cboStatus.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@Asset_No_System", SqlDbType.NVarChar).Value = txt_Sys_Asset.Text.Trim();
+                    Cmd.Parameters.Add("@Modified_Date", SqlDbType.DateTime).Value = DateTime.Now;
+                    Cmd.Parameters.Add("@Modified_By", SqlDbType.NChar).Value = userId;
+                    Cmd.Parameters.Add("@Amend", SqlDbType.Int).Value = Convert.ToInt64(txtAmend.Text.Trim()) + 1;
+                    
+                    Cmd.ExecuteNonQuery();
+
+                    // Insert to movement for first time created asset
+
+                    Sbd = new StringBuilder();
+                    Sbd.Remove(0, Sbd.Length);
+                    Sbd.Append("INSERT INTO Asset_Movement ");
+                    Sbd.Append("(Asset_Movement_Id,");
+                    Sbd.Append("Asset_No_System,");
+                    Sbd.Append("Asset_No,");
+                    Sbd.Append("Fixed_Asset_No,");
+                    Sbd.Append("From_Owner,");
+                    Sbd.Append("From_Base,");
+                    Sbd.Append("From_Location,");
+                    Sbd.Append("From_Status,");
+                    Sbd.Append("Remarks,");
+                    Sbd.Append("MovementDate,");
+                    Sbd.Append("Movement_By,");
+                    Sbd.Append("To_Owner,");
+                    Sbd.Append("To_Base,");
+                    Sbd.Append("To_Location,");
+                    Sbd.Append("To_Status,");
+                    Sbd.Append("Asste_Move_RunId) ");
+
+                    Sbd.Append("VALUES ");
+
+                    Sbd.Append("(@Asset_Movement_Id,");
+                    Sbd.Append("@Asset_No_System,");
+                    Sbd.Append("@Asset_No,");
+                    Sbd.Append("@Fixed_Asset_No,");
+                    Sbd.Append("@From_Owner,");
+                    Sbd.Append("@From_Base,");
+                    Sbd.Append("@From_Location,");
+                    Sbd.Append("@From_Status,");
+                    Sbd.Append("@Remarks,");
+                    Sbd.Append("@MovementDate,");
+                    Sbd.Append("@Movement_By,");
+                    Sbd.Append("@To_Owner,");
+                    Sbd.Append("@To_Base,");
+                    Sbd.Append("@To_Location,");
+                    Sbd.Append("@To_Status,");
+                    Sbd.Append("@Asste_Move_RunId) ");
+                    sqlSaveStHead = Sbd.ToString();
+
+                    Cmd.Parameters.Clear();
+                    Cmd.Transaction = Tr;
+                    Cmd.CommandText = sqlSaveStHead;
+
+                    Cmd.Parameters.Add("@Asset_Movement_Id", SqlDbType.NVarChar).Value = txtAssetMovementId.Text.Trim();
+                    Cmd.Parameters.Add("@Asset_No_System", SqlDbType.NVarChar).Value = txt_Sys_Asset.Text.Trim();
+                    Cmd.Parameters.Add("@Asset_No", SqlDbType.NVarChar).Value = txtAssetNo.Text.Trim();
+                    Cmd.Parameters.Add("@Fixed_Asset_No", SqlDbType.NVarChar).Value = txtFixAssetNo.Text.Trim();
+                    Cmd.Parameters.Add("@From_Owner", SqlDbType.NChar).Value = cboOwner.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@From_Base", SqlDbType.NChar).Value = cboBase.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@From_Location", SqlDbType.NChar).Value = cboLocation.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@From_Status", SqlDbType.NChar).Value = cboStatus.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Owner", SqlDbType.NChar).Value = cboOwner.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Base", SqlDbType.NChar).Value = cboBase.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Location", SqlDbType.NChar).Value = cboLocation.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@To_Status", SqlDbType.NChar).Value = cboStatus.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@Remarks", SqlDbType.NVarChar).Value = txtRemarksForMoveTo.Text.Trim();
+                    Cmd.Parameters.Add("@MovementDate", SqlDbType.DateTime).Value = DateTime.Now;
+                    Cmd.Parameters.Add("@Movement_By", SqlDbType.NChar).Value = userId;
+                    Cmd.Parameters.Add("@Asste_Move_RunId", SqlDbType.Int).Value = AssetMovementId;
+                    Cmd.ExecuteNonQuery();
+
+
+                    MessageBox.Show("Record asset successfully", "Asset Management Message", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    Tr.Commit();
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to record asset" + ex.Message, "Asset Management Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Tr.Rollback();
+                }
+                AssetManagement frm = new AssetManagement();
+                frm.Close();
+                AssetManagement frm2 = new AssetManagement();
+                frm2.ShowDialog();
+            }
+            
         }
 
         private void AssetMovement_Load(object sender, EventArgs e)
@@ -55,6 +173,7 @@ namespace WindowsFormsApplication1.AssetManagement
             cmb_Status();
             cmb_OWNER();
             txt_Sys_Asset.Text = AssetId;
+            Max_Asset_Movement();
         }
         private void cmb_Status()
         {
@@ -192,7 +311,36 @@ namespace WindowsFormsApplication1.AssetManagement
             txtLocation.Text = dt.Rows[0]["Asset_Purchase"].ToString();
             txtStatus.Text = dt.Rows[0]["Status_Name"].ToString();
             txtRemark.Text = dt.Rows[0]["Asste_Expire_Date"].ToString();
+            txtAmend.Text = dt.Rows[0]["Amend"].ToString();
 
+        }
+        private void Max_Asset_Movement()
+        {
+            Sbd = new StringBuilder();
+            Sbd.Remove(0, Sbd.Length);
+            Sbd.Append("SELECT MAX(SUBSTRING(Asset_Movement_Id,6,8)) AS Asset_No_System FROM Asset_Movement");
+            String sqlMaxStatementIndex;
+            sqlMaxStatementIndex = Sbd.ToString();
+            Cmd = new SqlCommand();
+            Cmd.CommandText = sqlMaxStatementIndex;
+            Cmd.CommandType = CommandType.Text;
+            Cmd.Connection = Conn;
+            string id = Cmd.ExecuteScalar().ToString();
+
+            if (id == "")
+            {
+                AssetMovementId = 1;
+            }
+            else
+            {
+                AssetMovementId = Convert.ToInt32(id.ToString());
+                AssetMovementId++;
+            }
+            string strMax = "";
+            strMax = String.Format("{0:0000}", Convert.ToInt16(AssetMovementId.ToString()));
+            txtAssetMovementId.Text = "M" + DateTime.Now.ToString("yy") + DateTime.Now.ToString("MM") + strMax;
+
+            Cmd.Parameters.Clear();
         }
     }
 }

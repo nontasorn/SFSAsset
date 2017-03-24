@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1.AssetManagement
         SqlTransaction Tr;
         string userId;
         string AssetId;
+        int CheckResult;
 
         private void AssetManagement_Load(object sender, EventArgs e)
         {
@@ -118,7 +119,7 @@ namespace WindowsFormsApplication1.AssetManagement
                 return;
             }
             AssetId = dgv_ViewAsset.Rows[e.RowIndex].Cells[0].Value.ToString();
-            MessageBox.Show(AssetId);
+            
             DataDetail();
         }
         private void DataDetail()
@@ -127,16 +128,17 @@ namespace WindowsFormsApplication1.AssetManagement
             if (dt.Rows.Count > 0)
             {
                 dgv_ViewAssetMovement.DataSource = dt;
-                //CheckResult = dt.Rows.Count;
-                //HeadDetail();
-                MessageBox.Show("111111111");
+                CheckResult = dt.Rows.Count;
+                DetailData();
+                
             }
             else
             {
-                //CheckResult = 0;
+                CheckResult = 0;
                 dgv_ViewAssetMovement.DataSource = null;
+                
             }
-            //Count.Text = CheckResult.ToString() + "  รายการ";
+            lbl_Asset_Count.Text = CheckResult.ToString() + "  รายการ";
         }
 
         private void AssetMovement_Btn_Click(object sender, EventArgs e)
@@ -150,10 +152,58 @@ namespace WindowsFormsApplication1.AssetManagement
                 AssetMovement frm = new AssetMovement();
                 
                 //AdditionalCredit.frmCreateAddCredit frm = new AdditionalCredit.frmCreateAddCredit();
+                Close();
                 frm.MovementID = AssetId.ToString();
                 frm.ShowDialog();
+                
             }
 
+        }
+        private void DetailData()
+        {
+            if (dgv_ViewAsset.RowCount > 0)
+            {
+
+                dgv_ViewAssetMovement.Columns[0].HeaderText = "Asset Movement Id";
+                dgv_ViewAssetMovement.Columns[1].HeaderText = "Asset No";
+                dgv_ViewAssetMovement.Columns[2].HeaderText = "Fixed Asset No";
+                dgv_ViewAssetMovement.Columns[3].HeaderText = "From Owner";
+                dgv_ViewAssetMovement.Columns[4].HeaderText = "To Owner";
+                dgv_ViewAssetMovement.Columns[5].HeaderText = "From Base";
+                dgv_ViewAssetMovement.Columns[6].HeaderText = "To Base";
+                dgv_ViewAssetMovement.Columns[7].HeaderText = "From Location";
+                dgv_ViewAssetMovement.Columns[8].HeaderText = "To Location";
+                dgv_ViewAssetMovement.Columns[9].HeaderText = "From Status";
+                dgv_ViewAssetMovement.Columns[10].HeaderText = "To Status";
+                dgv_ViewAssetMovement.Columns[11].HeaderText = "Remarks";
+                dgv_ViewAssetMovement.Columns[12].HeaderText = "Movement By";
+                dgv_ViewAssetMovement.Columns[13].HeaderText = "Movement Date";
+
+
+                FixColumnWidthdgvDetail();
+
+                dgv_ViewAssetMovement.Columns[13].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
+                
+
+            }
+        }
+        private void FixColumnWidthdgvDetail()
+        {
+            int w = dgv_ViewAssetMovement.Width;
+            dgv_ViewAssetMovement.Columns[0].Width = 100;
+            dgv_ViewAssetMovement.Columns[1].Width = 100;
+            dgv_ViewAssetMovement.Columns[2].Width = 100;
+            dgv_ViewAssetMovement.Columns[3].Width = 100;
+            dgv_ViewAssetMovement.Columns[4].Width = 100;
+            dgv_ViewAssetMovement.Columns[5].Width = 100;
+            dgv_ViewAssetMovement.Columns[6].Width = 100;
+            dgv_ViewAssetMovement.Columns[7].Width = 100;
+            dgv_ViewAssetMovement.Columns[8].Width = 100;
+            dgv_ViewAssetMovement.Columns[9].Width = 100;
+            dgv_ViewAssetMovement.Columns[10].Width = 100;
+            dgv_ViewAssetMovement.Columns[11].Width = 250;
+            dgv_ViewAssetMovement.Columns[12].Width = 100;
+            dgv_ViewAssetMovement.Columns[13].Width = 100;
         }
     }
 }
