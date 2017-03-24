@@ -139,7 +139,18 @@ namespace WindowsFormsApplication1.AssetManagement
 
                     MessageBox.Show("Record asset successfully", "Asset Management Message", MessageBoxButtons.OK, MessageBoxIcon.None);
                     Tr.Commit();
-                    
+                    DialogResult dlg = MessageBox.Show("ต้องการพิมพ์ เอกสาร Asset Movement หรือไม่!!!", "ผลการทำงาน", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dlg == DialogResult.OK)
+                    {
+
+
+                        frmAssetMovementReport rpt = new frmAssetMovementReport();
+                        rpt.StartPosition = FormStartPosition.CenterScreen;   // กำหนด frm ย่อย ให้อยู่ตรงกลาง
+                        rpt.Asset_Sys = txt_Sys_Asset.Text.Trim();
+                        rpt.ShowDialog();
+
+                    }
+                    Close();
 
                 }
                 catch (Exception ex)
@@ -147,10 +158,9 @@ namespace WindowsFormsApplication1.AssetManagement
                     MessageBox.Show("Unable to record asset" + ex.Message, "Asset Management Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Tr.Rollback();
                 }
-                AssetManagement frm = new AssetManagement();
-                frm.Close();
-                AssetManagement frm2 = new AssetManagement();
-                frm2.ShowDialog();
+                
+                
+                
             }
             
         }

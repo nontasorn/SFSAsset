@@ -32,8 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Admin\UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +79,17 @@
     </Compile>
     <Compile Include="AssetManagement\CreateAsset.Designer.cs">
       <DependentUpon>CreateAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetManagement\CryAssetMovement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryAssetMovement.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="AssetManagement\frmAssetMovementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetManagement\frmAssetMovementReport.Designer.cs">
+      <DependentUpon>frmAssetMovementReport.cs</DependentUpon>
     </Compile>
     <Compile Include="AssetManagement\ViewAssetDetails.cs">
       <SubType>Form</SubType>
@@ -102,6 +125,13 @@
     <EmbeddedResource Include="AssetManagement\CreateAsset.resx">
       <DependentUpon>CreateAsset.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssetManagement\CryAssetMovement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryAssetMovement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetManagement\frmAssetMovementReport.resx">
+      <DependentUpon>frmAssetMovementReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AssetManagement\ViewAssetDetails.resx">
       <DependentUpon>ViewAssetDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +151,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Admin\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Admin\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Admin\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
