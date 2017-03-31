@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAmend = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtAssetNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
@@ -48,6 +50,8 @@
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.CreateAssetMovement_Btn = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtAssetMovementId = new System.Windows.Forms.TextBox();
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.txtRemarksForMoveTo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,10 +62,6 @@
             this.cboOwner = new System.Windows.Forms.ComboBox();
             this.cboBase = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtAssetMovementId = new System.Windows.Forms.TextBox();
-            this.txtAmend = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Toolstrip_Create_User.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -94,6 +94,29 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Movement Details";
+            // 
+            // txtAmend
+            // 
+            this.txtAmend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtAmend.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAmend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAmend.ForeColor = System.Drawing.Color.Red;
+            this.txtAmend.Location = new System.Drawing.Point(896, 37);
+            this.txtAmend.Name = "txtAmend";
+            this.txtAmend.ReadOnly = true;
+            this.txtAmend.Size = new System.Drawing.Size(58, 22);
+            this.txtAmend.TabIndex = 161;
+            this.txtAmend.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(833, 40);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 16);
+            this.label14.TabIndex = 160;
+            this.label14.Text = "Amend :";
             // 
             // txtAssetNo
             // 
@@ -325,6 +348,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Move To";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(57, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 16);
+            this.label13.TabIndex = 163;
+            this.label13.Text = "Asset Move No  :";
+            // 
+            // txtAssetMovementId
+            // 
+            this.txtAssetMovementId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtAssetMovementId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAssetMovementId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAssetMovementId.ForeColor = System.Drawing.Color.Red;
+            this.txtAssetMovementId.Location = new System.Drawing.Point(186, 47);
+            this.txtAssetMovementId.Name = "txtAssetMovementId";
+            this.txtAssetMovementId.ReadOnly = true;
+            this.txtAssetMovementId.Size = new System.Drawing.Size(153, 22);
+            this.txtAssetMovementId.TabIndex = 164;
+            this.txtAssetMovementId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // cboStatus
             // 
             this.cboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -410,6 +456,9 @@
             this.cboBase.Name = "cboBase";
             this.cboBase.Size = new System.Drawing.Size(115, 24);
             this.cboBase.TabIndex = 158;
+            this.cboBase.SelectedIndexChanged += new System.EventHandler(this.cboBase_SelectedIndexChanged);
+            this.cboBase.ValueMemberChanged += new System.EventHandler(this.cboBase_ValueMemberChanged);
+            this.cboBase.TextChanged += new System.EventHandler(this.cboBase_TextChanged);
             // 
             // label6
             // 
@@ -420,52 +469,6 @@
             this.label6.Size = new System.Drawing.Size(49, 16);
             this.label6.TabIndex = 157;
             this.label6.Text = "Base  :";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(57, 49);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 16);
-            this.label13.TabIndex = 163;
-            this.label13.Text = "Asset Move No  :";
-            // 
-            // txtAssetMovementId
-            // 
-            this.txtAssetMovementId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtAssetMovementId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAssetMovementId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAssetMovementId.ForeColor = System.Drawing.Color.Red;
-            this.txtAssetMovementId.Location = new System.Drawing.Point(186, 47);
-            this.txtAssetMovementId.Name = "txtAssetMovementId";
-            this.txtAssetMovementId.ReadOnly = true;
-            this.txtAssetMovementId.Size = new System.Drawing.Size(153, 22);
-            this.txtAssetMovementId.TabIndex = 164;
-            this.txtAssetMovementId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAmend
-            // 
-            this.txtAmend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtAmend.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAmend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAmend.ForeColor = System.Drawing.Color.Red;
-            this.txtAmend.Location = new System.Drawing.Point(896, 37);
-            this.txtAmend.Name = "txtAmend";
-            this.txtAmend.ReadOnly = true;
-            this.txtAmend.Size = new System.Drawing.Size(58, 22);
-            this.txtAmend.TabIndex = 161;
-            this.txtAmend.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(833, 40);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 16);
-            this.label14.TabIndex = 160;
-            this.label14.Text = "Amend :";
             // 
             // AssetMovement
             // 

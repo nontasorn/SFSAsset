@@ -352,5 +352,53 @@ namespace WindowsFormsApplication1.AssetManagement
 
             Cmd.Parameters.Clear();
         }
+
+        private void cboBase_TextChanged(object sender, EventArgs e)
+        {
+            cmb_Location_Change();
+        }
+
+        private void cmb_Location_Change()
+        {
+            Sbd = new StringBuilder();
+            Sbd.Remove(0, Sbd.Length);
+
+            Sbd.Append("SELECT Location_ID,Location_Name FROM Location WHERE Location_Base = \'");
+            Sbd.Append(cboBase.ValueMember);
+            Sbd.Append("\'");
+
+            string sqlIni = Sbd.ToString();
+            Cmd = new SqlCommand();
+
+            Cmd.CommandText = sqlIni;
+            Cmd.CommandType = CommandType.Text;
+            Cmd.Connection = Conn;
+            Sdr = Cmd.ExecuteReader();
+
+            if (Sdr.HasRows)
+            {
+                DataTable dtUser = new DataTable();
+                dtUser.Load(Sdr);
+
+                cboLocation.BeginUpdate();
+                cboLocation.DisplayMember = "Location_Name";
+                cboLocation.ValueMember = "Location_ID";
+                cboLocation.DataSource = dtUser;
+                cboLocation.EndUpdate();
+                cboLocation.SelectedIndex = 0;
+
+            }
+            Sdr.Close();
+        }
+
+        private void cboBase_ValueMemberChanged(object sender, EventArgs e)
+        {
+            cmb_Location_Change();
+        }
+
+        private void cboBase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,6 +27,7 @@ namespace WindowsFormsApplication1.AssetManagement
         string userId;
         string AssetId;
         int CheckResult;
+        string strAssetMovementId;
 
         private void AssetManagement_Load(object sender, EventArgs e)
         {
@@ -204,6 +205,24 @@ namespace WindowsFormsApplication1.AssetManagement
             dgv_ViewAssetMovement.Columns[11].Width = 250;
             dgv_ViewAssetMovement.Columns[12].Width = 100;
             dgv_ViewAssetMovement.Columns[13].Width = 100;
+        }
+
+        private void AssetMovementReportBtn_Click(object sender, EventArgs e)
+        {
+            frmAssetMovementReport rpt = new frmAssetMovementReport();
+            rpt.StartPosition = FormStartPosition.CenterScreen;   // กำหนด frm ย่อย ให้อยู่ตรงกลาง
+            rpt.Asset_Sys = strAssetMovementId;
+            rpt.ShowDialog();
+        }
+
+        private void dgv_ViewAssetMovement_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
+            strAssetMovementId = dgv_ViewAssetMovement.Rows[e.RowIndex].Cells[0].Value.ToString();
+
         }
     }
 }

@@ -34,7 +34,9 @@
             this.txtFixAssetNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.txtAssetDetails = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Sys_Asset = new System.Windows.Forms.TextBox();
             this.dtExpireDate = new System.Windows.Forms.DateTimePicker();
@@ -52,8 +54,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cboOwner = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.CreateAsset_Btn = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -145,6 +145,16 @@
             this.label6.TabIndex = 140;
             this.label6.Text = "Fixed Asset No  :";
             // 
+            // txtRemarks
+            // 
+            this.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtRemarks.Location = new System.Drawing.Point(188, 183);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtRemarks.Size = new System.Drawing.Size(683, 22);
+            this.txtRemarks.TabIndex = 134;
+            // 
             // txtAssetDetails
             // 
             this.txtAssetDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -154,6 +164,16 @@
             this.txtAssetDetails.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAssetDetails.Size = new System.Drawing.Size(679, 22);
             this.txtAssetDetails.TabIndex = 137;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label4.Location = new System.Drawing.Point(101, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.TabIndex = 135;
+            this.label4.Text = "Remarks :";
             // 
             // label8
             // 
@@ -289,6 +309,7 @@
             this.cboBase.Name = "cboBase";
             this.cboBase.Size = new System.Drawing.Size(115, 24);
             this.cboBase.TabIndex = 148;
+            this.cboBase.SelectedIndexChanged += new System.EventHandler(this.cboBase_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -318,26 +339,6 @@
             this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 138;
             this.label5.Text = "Owner :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(101, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
-            this.label4.TabIndex = 135;
-            this.label4.Text = "Remarks :";
-            // 
-            // txtRemarks
-            // 
-            this.txtRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRemarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRemarks.Location = new System.Drawing.Point(188, 183);
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtRemarks.Size = new System.Drawing.Size(683, 22);
-            this.txtRemarks.TabIndex = 134;
             // 
             // Toolstrip_Create_User
             // 

@@ -55,3 +55,4 @@ D:\20161122\Asset_Project\Project4\trunk\WindowsFormsApplication1\obj\Debug\Wind
 D:\20161122\Asset_Project\Project4\trunk\WindowsFormsApplication1\obj\Debug\Asset.csproj.GenerateResource.Cache
 D:\20161122\Asset_Project\Project4\trunk\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 D:\20161122\Asset_Project\Project4\trunk\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\20161122\Asset_Project\Project4\trunk\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.AssetManagement.frmAssetMovementReport.resources

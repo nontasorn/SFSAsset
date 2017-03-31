@@ -279,7 +279,53 @@ namespace WindowsFormsApplication1.Admin {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class AssetMovementDataTable : global::System.Data.TypedTableBase<AssetMovementRow> {
             
-            private global::System.Data.DataColumn columnDataColumn1;
+            private global::System.Data.DataColumn columnAsset_No_System;
+            
+            private global::System.Data.DataColumn columnAsset_No;
+            
+            private global::System.Data.DataColumn columnFixed_Asset_No;
+            
+            private global::System.Data.DataColumn columnAsset_Details;
+            
+            private global::System.Data.DataColumn columnAsset_TypeName;
+            
+            private global::System.Data.DataColumn columnAsset_Brand;
+            
+            private global::System.Data.DataColumn columnStatus_Name;
+            
+            private global::System.Data.DataColumn columnAsste_Expire_Date;
+            
+            private global::System.Data.DataColumn columnCreateBy;
+            
+            private global::System.Data.DataColumn columnModified_By;
+            
+            private global::System.Data.DataColumn columnModified_Date;
+            
+            private global::System.Data.DataColumn columnAmend;
+            
+            private global::System.Data.DataColumn columnAsset_Movement_Id;
+            
+            private global::System.Data.DataColumn columnFrom_Owner;
+            
+            private global::System.Data.DataColumn columnToOwner;
+            
+            private global::System.Data.DataColumn columnFrom_Base;
+            
+            private global::System.Data.DataColumn columnTo_Base;
+            
+            private global::System.Data.DataColumn columnFrom_Location;
+            
+            private global::System.Data.DataColumn columnTo_Location;
+            
+            private global::System.Data.DataColumn columnFrom_Status;
+            
+            private global::System.Data.DataColumn columnTo_Status;
+            
+            private global::System.Data.DataColumn columnRemarks;
+            
+            private global::System.Data.DataColumn columnMovement_By;
+            
+            private global::System.Data.DataColumn columnMovementDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -316,9 +362,193 @@ namespace WindowsFormsApplication1.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DataColumn1Column {
+            public global::System.Data.DataColumn Asset_No_SystemColumn {
                 get {
-                    return this.columnDataColumn1;
+                    return this.columnAsset_No_System;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Asset_NoColumn {
+                get {
+                    return this.columnAsset_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Fixed_Asset_NoColumn {
+                get {
+                    return this.columnFixed_Asset_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Asset_DetailsColumn {
+                get {
+                    return this.columnAsset_Details;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Asset_TypeNameColumn {
+                get {
+                    return this.columnAsset_TypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Asset_BrandColumn {
+                get {
+                    return this.columnAsset_Brand;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Status_NameColumn {
+                get {
+                    return this.columnStatus_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Asste_Expire_DateColumn {
+                get {
+                    return this.columnAsste_Expire_Date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CreateByColumn {
+                get {
+                    return this.columnCreateBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Modified_ByColumn {
+                get {
+                    return this.columnModified_By;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Modified_DateColumn {
+                get {
+                    return this.columnModified_Date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AmendColumn {
+                get {
+                    return this.columnAmend;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Asset_Movement_IdColumn {
+                get {
+                    return this.columnAsset_Movement_Id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn From_OwnerColumn {
+                get {
+                    return this.columnFrom_Owner;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ToOwnerColumn {
+                get {
+                    return this.columnToOwner;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn From_BaseColumn {
+                get {
+                    return this.columnFrom_Base;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn To_BaseColumn {
+                get {
+                    return this.columnTo_Base;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn From_LocationColumn {
+                get {
+                    return this.columnFrom_Location;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn To_LocationColumn {
+                get {
+                    return this.columnTo_Location;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn From_StatusColumn {
+                get {
+                    return this.columnFrom_Status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn To_StatusColumn {
+                get {
+                    return this.columnTo_Status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RemarksColumn {
+                get {
+                    return this.columnRemarks;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Movement_ByColumn {
+                get {
+                    return this.columnMovement_By;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MovementDateColumn {
+                get {
+                    return this.columnMovementDate;
                 }
             }
             
@@ -359,10 +589,57 @@ namespace WindowsFormsApplication1.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AssetMovementRow AddAssetMovementRow(string DataColumn1) {
+            public AssetMovementRow AddAssetMovementRow(
+                        string Asset_No_System, 
+                        string Asset_No, 
+                        string Fixed_Asset_No, 
+                        string Asset_Details, 
+                        string Asset_TypeName, 
+                        string Asset_Brand, 
+                        string Status_Name, 
+                        System.DateTime Asste_Expire_Date, 
+                        string CreateBy, 
+                        string Modified_By, 
+                        System.DateTime Modified_Date, 
+                        int Amend, 
+                        string Asset_Movement_Id, 
+                        string From_Owner, 
+                        string ToOwner, 
+                        string From_Base, 
+                        string To_Base, 
+                        string From_Location, 
+                        string To_Location, 
+                        string From_Status, 
+                        string To_Status, 
+                        string Remarks, 
+                        string Movement_By, 
+                        string MovementDate) {
                 AssetMovementRow rowAssetMovementRow = ((AssetMovementRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        DataColumn1};
+                        Asset_No_System,
+                        Asset_No,
+                        Fixed_Asset_No,
+                        Asset_Details,
+                        Asset_TypeName,
+                        Asset_Brand,
+                        Status_Name,
+                        Asste_Expire_Date,
+                        CreateBy,
+                        Modified_By,
+                        Modified_Date,
+                        Amend,
+                        Asset_Movement_Id,
+                        From_Owner,
+                        ToOwner,
+                        From_Base,
+                        To_Base,
+                        From_Location,
+                        To_Location,
+                        From_Status,
+                        To_Status,
+                        Remarks,
+                        Movement_By,
+                        MovementDate};
                 rowAssetMovementRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAssetMovementRow);
                 return rowAssetMovementRow;
@@ -385,14 +662,83 @@ namespace WindowsFormsApplication1.Admin {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnDataColumn1 = base.Columns["DataColumn1"];
+                this.columnAsset_No_System = base.Columns["Asset_No_System"];
+                this.columnAsset_No = base.Columns["Asset_No"];
+                this.columnFixed_Asset_No = base.Columns["Fixed_Asset_No"];
+                this.columnAsset_Details = base.Columns["Asset_Details"];
+                this.columnAsset_TypeName = base.Columns["Asset_TypeName"];
+                this.columnAsset_Brand = base.Columns["Asset_Brand"];
+                this.columnStatus_Name = base.Columns["Status_Name"];
+                this.columnAsste_Expire_Date = base.Columns["Asste_Expire_Date"];
+                this.columnCreateBy = base.Columns["CreateBy"];
+                this.columnModified_By = base.Columns["Modified_By"];
+                this.columnModified_Date = base.Columns["Modified_Date"];
+                this.columnAmend = base.Columns["Amend"];
+                this.columnAsset_Movement_Id = base.Columns["Asset_Movement_Id"];
+                this.columnFrom_Owner = base.Columns["From_Owner"];
+                this.columnToOwner = base.Columns["ToOwner"];
+                this.columnFrom_Base = base.Columns["From_Base"];
+                this.columnTo_Base = base.Columns["To_Base"];
+                this.columnFrom_Location = base.Columns["From_Location"];
+                this.columnTo_Location = base.Columns["To_Location"];
+                this.columnFrom_Status = base.Columns["From_Status"];
+                this.columnTo_Status = base.Columns["To_Status"];
+                this.columnRemarks = base.Columns["Remarks"];
+                this.columnMovement_By = base.Columns["Movement_By"];
+                this.columnMovementDate = base.Columns["MovementDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDataColumn1);
+                this.columnAsset_No_System = new global::System.Data.DataColumn("Asset_No_System", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsset_No_System);
+                this.columnAsset_No = new global::System.Data.DataColumn("Asset_No", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsset_No);
+                this.columnFixed_Asset_No = new global::System.Data.DataColumn("Fixed_Asset_No", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFixed_Asset_No);
+                this.columnAsset_Details = new global::System.Data.DataColumn("Asset_Details", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsset_Details);
+                this.columnAsset_TypeName = new global::System.Data.DataColumn("Asset_TypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsset_TypeName);
+                this.columnAsset_Brand = new global::System.Data.DataColumn("Asset_Brand", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsset_Brand);
+                this.columnStatus_Name = new global::System.Data.DataColumn("Status_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus_Name);
+                this.columnAsste_Expire_Date = new global::System.Data.DataColumn("Asste_Expire_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsste_Expire_Date);
+                this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreateBy);
+                this.columnModified_By = new global::System.Data.DataColumn("Modified_By", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModified_By);
+                this.columnModified_Date = new global::System.Data.DataColumn("Modified_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModified_Date);
+                this.columnAmend = new global::System.Data.DataColumn("Amend", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmend);
+                this.columnAsset_Movement_Id = new global::System.Data.DataColumn("Asset_Movement_Id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAsset_Movement_Id);
+                this.columnFrom_Owner = new global::System.Data.DataColumn("From_Owner", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrom_Owner);
+                this.columnToOwner = new global::System.Data.DataColumn("ToOwner", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToOwner);
+                this.columnFrom_Base = new global::System.Data.DataColumn("From_Base", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrom_Base);
+                this.columnTo_Base = new global::System.Data.DataColumn("To_Base", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTo_Base);
+                this.columnFrom_Location = new global::System.Data.DataColumn("From_Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrom_Location);
+                this.columnTo_Location = new global::System.Data.DataColumn("To_Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTo_Location);
+                this.columnFrom_Status = new global::System.Data.DataColumn("From_Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrom_Status);
+                this.columnTo_Status = new global::System.Data.DataColumn("To_Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTo_Status);
+                this.columnRemarks = new global::System.Data.DataColumn("Remarks", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRemarks);
+                this.columnMovement_By = new global::System.Data.DataColumn("Movement_By", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMovement_By);
+                this.columnMovementDate = new global::System.Data.DataColumn("MovementDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMovementDate);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -535,30 +881,674 @@ namespace WindowsFormsApplication1.Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DataColumn1 {
+            public string Asset_No_System {
                 get {
                     try {
-                        return ((string)(this[this.tableAssetMovement.DataColumn1Column]));
+                        return ((string)(this[this.tableAssetMovement.Asset_No_SystemColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DataColumn1\' in table \'AssetMovement\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asset_No_System\' in table \'AssetMovement\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAssetMovement.DataColumn1Column] = value;
+                    this[this.tableAssetMovement.Asset_No_SystemColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDataColumn1Null() {
-                return this.IsNull(this.tableAssetMovement.DataColumn1Column);
+            public string Asset_No {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Asset_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asset_No\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Asset_NoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDataColumn1Null() {
-                this[this.tableAssetMovement.DataColumn1Column] = global::System.Convert.DBNull;
+            public string Fixed_Asset_No {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Fixed_Asset_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fixed_Asset_No\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Fixed_Asset_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Asset_Details {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Asset_DetailsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asset_Details\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Asset_DetailsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Asset_TypeName {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Asset_TypeNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asset_TypeName\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Asset_TypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Asset_Brand {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Asset_BrandColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asset_Brand\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Asset_BrandColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Status_Name {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Status_NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status_Name\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Status_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Asste_Expire_Date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableAssetMovement.Asste_Expire_DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asste_Expire_Date\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Asste_Expire_DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CreateBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.CreateByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.CreateByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Modified_By {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Modified_ByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Modified_By\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Modified_ByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Modified_Date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableAssetMovement.Modified_DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Modified_Date\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Modified_DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Amend {
+                get {
+                    try {
+                        return ((int)(this[this.tableAssetMovement.AmendColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amend\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.AmendColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Asset_Movement_Id {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Asset_Movement_IdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Asset_Movement_Id\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Asset_Movement_IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string From_Owner {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.From_OwnerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'From_Owner\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.From_OwnerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ToOwner {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.ToOwnerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToOwner\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.ToOwnerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string From_Base {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.From_BaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'From_Base\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.From_BaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string To_Base {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.To_BaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'To_Base\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.To_BaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string From_Location {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.From_LocationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'From_Location\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.From_LocationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string To_Location {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.To_LocationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'To_Location\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.To_LocationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string From_Status {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.From_StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'From_Status\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.From_StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string To_Status {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.To_StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'To_Status\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.To_StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Remarks {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.RemarksColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Remarks\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.RemarksColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Movement_By {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.Movement_ByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Movement_By\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.Movement_ByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MovementDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableAssetMovement.MovementDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MovementDate\' in table \'AssetMovement\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAssetMovement.MovementDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsset_No_SystemNull() {
+                return this.IsNull(this.tableAssetMovement.Asset_No_SystemColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsset_No_SystemNull() {
+                this[this.tableAssetMovement.Asset_No_SystemColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsset_NoNull() {
+                return this.IsNull(this.tableAssetMovement.Asset_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsset_NoNull() {
+                this[this.tableAssetMovement.Asset_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFixed_Asset_NoNull() {
+                return this.IsNull(this.tableAssetMovement.Fixed_Asset_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFixed_Asset_NoNull() {
+                this[this.tableAssetMovement.Fixed_Asset_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsset_DetailsNull() {
+                return this.IsNull(this.tableAssetMovement.Asset_DetailsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsset_DetailsNull() {
+                this[this.tableAssetMovement.Asset_DetailsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsset_TypeNameNull() {
+                return this.IsNull(this.tableAssetMovement.Asset_TypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsset_TypeNameNull() {
+                this[this.tableAssetMovement.Asset_TypeNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsset_BrandNull() {
+                return this.IsNull(this.tableAssetMovement.Asset_BrandColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsset_BrandNull() {
+                this[this.tableAssetMovement.Asset_BrandColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsStatus_NameNull() {
+                return this.IsNull(this.tableAssetMovement.Status_NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetStatus_NameNull() {
+                this[this.tableAssetMovement.Status_NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsste_Expire_DateNull() {
+                return this.IsNull(this.tableAssetMovement.Asste_Expire_DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsste_Expire_DateNull() {
+                this[this.tableAssetMovement.Asste_Expire_DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreateByNull() {
+                return this.IsNull(this.tableAssetMovement.CreateByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreateByNull() {
+                this[this.tableAssetMovement.CreateByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsModified_ByNull() {
+                return this.IsNull(this.tableAssetMovement.Modified_ByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetModified_ByNull() {
+                this[this.tableAssetMovement.Modified_ByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsModified_DateNull() {
+                return this.IsNull(this.tableAssetMovement.Modified_DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetModified_DateNull() {
+                this[this.tableAssetMovement.Modified_DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAmendNull() {
+                return this.IsNull(this.tableAssetMovement.AmendColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAmendNull() {
+                this[this.tableAssetMovement.AmendColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAsset_Movement_IdNull() {
+                return this.IsNull(this.tableAssetMovement.Asset_Movement_IdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAsset_Movement_IdNull() {
+                this[this.tableAssetMovement.Asset_Movement_IdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrom_OwnerNull() {
+                return this.IsNull(this.tableAssetMovement.From_OwnerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrom_OwnerNull() {
+                this[this.tableAssetMovement.From_OwnerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsToOwnerNull() {
+                return this.IsNull(this.tableAssetMovement.ToOwnerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetToOwnerNull() {
+                this[this.tableAssetMovement.ToOwnerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrom_BaseNull() {
+                return this.IsNull(this.tableAssetMovement.From_BaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrom_BaseNull() {
+                this[this.tableAssetMovement.From_BaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTo_BaseNull() {
+                return this.IsNull(this.tableAssetMovement.To_BaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTo_BaseNull() {
+                this[this.tableAssetMovement.To_BaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrom_LocationNull() {
+                return this.IsNull(this.tableAssetMovement.From_LocationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrom_LocationNull() {
+                this[this.tableAssetMovement.From_LocationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTo_LocationNull() {
+                return this.IsNull(this.tableAssetMovement.To_LocationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTo_LocationNull() {
+                this[this.tableAssetMovement.To_LocationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrom_StatusNull() {
+                return this.IsNull(this.tableAssetMovement.From_StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrom_StatusNull() {
+                this[this.tableAssetMovement.From_StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTo_StatusNull() {
+                return this.IsNull(this.tableAssetMovement.To_StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTo_StatusNull() {
+                this[this.tableAssetMovement.To_StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRemarksNull() {
+                return this.IsNull(this.tableAssetMovement.RemarksColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRemarksNull() {
+                this[this.tableAssetMovement.RemarksColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMovement_ByNull() {
+                return this.IsNull(this.tableAssetMovement.Movement_ByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMovement_ByNull() {
+                this[this.tableAssetMovement.Movement_ByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMovementDateNull() {
+                return this.IsNull(this.tableAssetMovement.MovementDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMovementDateNull() {
+                this[this.tableAssetMovement.MovementDateColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Class;
 using System.Data.SqlClient;
+using CrystalDecisions.CrystalReports.Engine;
+using System.Collections;
+
+
 
 namespace WindowsFormsApplication1.AssetManagement
 {
@@ -26,11 +30,11 @@ namespace WindowsFormsApplication1.AssetManagement
         SqlDataReader Sdr;
         SqlTransaction Tr;
         string userId;
-        string strAsset_Sys;
+        string strAssetMovementId;
 
         internal string Asset_Sys
         {
-            set { strAsset_Sys = value; }
+            set { strAssetMovementId = value; }
         }
 
         private void frmAssetMovementReport_Load(object sender, EventArgs e)
@@ -46,14 +50,7 @@ namespace WindowsFormsApplication1.AssetManagement
             Conn.Open();
             userId = DBConnString.sUserIdLogin;
 
-            DataSet ds = new DataSet();
-            SqlCommand cmd = new SqlCommand("ASSET_SHOW" + strAsset_Sys.ToString(), Conn); //
-            
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(ds, "ds");
-            Conn.Close();
+            Data();
 
             /*
             Statement.CtrInvoiceReport Ctr = new CtrInvoiceReport();
@@ -62,6 +59,18 @@ namespace WindowsFormsApplication1.AssetManagement
             CrvVC.Refresh();
             CrvVC.Show();
              * */
+        }
+
+        private void Data()
+        {
+            //DataTable dt = Class.DBConnString.clsDB.QueryDataTable("AranalysisReport " + txtidCustomer.Text.Trim() + ',' + "'" + dtStartDate.Value.ToString() + "'" + ',' + "'" + dtEndDate.Value.ToString() + "'");
+
+            DataTable dt = Class.DBConnString.clsDB.QueryDataTable("AASSET_MOVEMENT_REPORT " + strAssetMovementId.ToString());
+            CryAssetMovement Ctr = new CryAssetMovement();
+            Ctr.SetDataSource(dt);
+            CrvAssetMovement.ReportSource = Ctr;
+            CrvAssetMovement.Refresh();
+            CrvAssetMovement.Show();
         }
     }
 }
