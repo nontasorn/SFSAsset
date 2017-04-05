@@ -286,16 +286,16 @@
             // 
             this.cboLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboLocation.FormattingEnabled = true;
-            this.cboLocation.Location = new System.Drawing.Point(707, 79);
+            this.cboLocation.Location = new System.Drawing.Point(689, 79);
             this.cboLocation.Name = "cboLocation";
-            this.cboLocation.Size = new System.Drawing.Size(154, 24);
+            this.cboLocation.Size = new System.Drawing.Size(259, 24);
             this.cboLocation.TabIndex = 150;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label11.Location = new System.Drawing.Point(633, 82);
+            this.label11.Location = new System.Drawing.Point(616, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 16);
             this.label11.TabIndex = 149;
@@ -309,7 +309,6 @@
             this.cboBase.Name = "cboBase";
             this.cboBase.Size = new System.Drawing.Size(115, 24);
             this.cboBase.TabIndex = 148;
-            this.cboBase.SelectedIndexChanged += new System.EventHandler(this.cboBase_SelectedIndexChanged);
             // 
             // label9
             // 

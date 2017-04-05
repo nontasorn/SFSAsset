@@ -96,6 +96,7 @@
             this.dgv_ViewAsset.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgv_ViewAsset.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_ViewAsset.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ViewAsset.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ViewAsset.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgv_ViewAsset.Location = new System.Drawing.Point(3, 3);
             this.dgv_ViewAsset.MultiSelect = false;

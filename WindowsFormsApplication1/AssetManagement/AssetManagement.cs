@@ -71,26 +71,30 @@ namespace WindowsFormsApplication1.AssetManagement
 
                 dgv_ViewAsset.Columns[0].HeaderText = "#";
                 dgv_ViewAsset.Columns[1].HeaderText = "Asset No";
-                dgv_ViewAsset.Columns[2].HeaderText = "Fixed Asset No";
-                dgv_ViewAsset.Columns[3].HeaderText = "Asset Details";
-                dgv_ViewAsset.Columns[4].HeaderText = "Type";
-                dgv_ViewAsset.Columns[5].HeaderText = "Brand";
-                dgv_ViewAsset.Columns[6].HeaderText = "Purchase Date";
-                dgv_ViewAsset.Columns[7].HeaderText = "Status";
-                dgv_ViewAsset.Columns[8].HeaderText = "Expire Date";
-                dgv_ViewAsset.Columns[9].HeaderText = "Created By";
-                dgv_ViewAsset.Columns[10].HeaderText = "Created Date";
-                dgv_ViewAsset.Columns[11].HeaderText = "Modified By";
-                dgv_ViewAsset.Columns[12].HeaderText = "Modified Date";
-                dgv_ViewAsset.Columns[13].HeaderText = "Amend";
+                dgv_ViewAsset.Columns[2].HeaderText = "Fixed Asset";
+                dgv_ViewAsset.Columns[3].HeaderText = "Owner";
+                dgv_ViewAsset.Columns[4].HeaderText = "Department";
+                dgv_ViewAsset.Columns[5].HeaderText = "Location";
+                dgv_ViewAsset.Columns[6].HeaderText = "Base";
+                dgv_ViewAsset.Columns[7].HeaderText = "Asset Details";
+                dgv_ViewAsset.Columns[8].HeaderText = "Type";
+                dgv_ViewAsset.Columns[9].HeaderText = "Brand";
+                dgv_ViewAsset.Columns[10].HeaderText = "Purchase Date";
+                dgv_ViewAsset.Columns[11].HeaderText = "Status";
+                dgv_ViewAsset.Columns[12].HeaderText = "Expire Date";
+                dgv_ViewAsset.Columns[13].HeaderText = "Created By";
+                dgv_ViewAsset.Columns[14].HeaderText = "Created Date";
+                dgv_ViewAsset.Columns[15].HeaderText = "Modified By";
+                dgv_ViewAsset.Columns[16].HeaderText = "Modified Date";
+                dgv_ViewAsset.Columns[17].HeaderText = "Amend";
 
 
                 FixColumnWidthdgvHead();
 
-                dgv_ViewAsset.Columns[6].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
-                dgv_ViewAsset.Columns[8].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
                 dgv_ViewAsset.Columns[10].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
                 dgv_ViewAsset.Columns[12].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
+                dgv_ViewAsset.Columns[16].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
+                dgv_ViewAsset.Columns[14].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
 
             }
         }
@@ -100,17 +104,22 @@ namespace WindowsFormsApplication1.AssetManagement
             dgv_ViewAsset.Columns[0].Width = 50;
             dgv_ViewAsset.Columns[1].Width = 100;
             dgv_ViewAsset.Columns[2].Width = 100;
-            dgv_ViewAsset.Columns[3].Width = 250;
+            dgv_ViewAsset.Columns[3].Width = 150;
             dgv_ViewAsset.Columns[4].Width = 100;
             dgv_ViewAsset.Columns[5].Width = 100;
             dgv_ViewAsset.Columns[6].Width = 100;
-            dgv_ViewAsset.Columns[7].Width = 100;
+            dgv_ViewAsset.Columns[7].Width = 250;
             dgv_ViewAsset.Columns[8].Width = 100;
             dgv_ViewAsset.Columns[9].Width = 100;
             dgv_ViewAsset.Columns[10].Width = 100;
             dgv_ViewAsset.Columns[11].Width = 100;
             dgv_ViewAsset.Columns[12].Width = 100;
-            dgv_ViewAsset.Columns[13].Width = 50;
+            dgv_ViewAsset.Columns[13].Width = 100;
+            dgv_ViewAsset.Columns[14].Width = 100;
+            dgv_ViewAsset.Columns[15].Width = 100;
+            dgv_ViewAsset.Columns[16].Width = 100;
+            dgv_ViewAsset.Columns[17].Width = 50;
+            
         }
 
         private void dgv_ViewAsset_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)

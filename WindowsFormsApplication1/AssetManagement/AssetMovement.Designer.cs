@@ -456,9 +456,6 @@
             this.cboBase.Name = "cboBase";
             this.cboBase.Size = new System.Drawing.Size(115, 24);
             this.cboBase.TabIndex = 158;
-            this.cboBase.SelectedIndexChanged += new System.EventHandler(this.cboBase_SelectedIndexChanged);
-            this.cboBase.ValueMemberChanged += new System.EventHandler(this.cboBase_ValueMemberChanged);
-            this.cboBase.TextChanged += new System.EventHandler(this.cboBase_TextChanged);
             // 
             // label6
             // 
