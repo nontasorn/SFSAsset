@@ -63,6 +63,8 @@
             this.txtcomputerName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.cboDepartment = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Toolstrip_Create_User.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -267,16 +269,16 @@
             // 
             this.cboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Location = new System.Drawing.Point(178, 116);
+            this.cboStatus.Location = new System.Drawing.Point(826, 119);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(237, 24);
+            this.cboStatus.Size = new System.Drawing.Size(128, 24);
             this.cboStatus.TabIndex = 152;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label12.Location = new System.Drawing.Point(107, 116);
+            this.label12.Location = new System.Drawing.Point(769, 122);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 16);
             this.label12.TabIndex = 151;
@@ -286,7 +288,7 @@
             // 
             this.cboLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboLocation.FormattingEnabled = true;
-            this.cboLocation.Location = new System.Drawing.Point(689, 79);
+            this.cboLocation.Location = new System.Drawing.Point(490, 119);
             this.cboLocation.Name = "cboLocation";
             this.cboLocation.Size = new System.Drawing.Size(259, 24);
             this.cboLocation.TabIndex = 150;
@@ -295,7 +297,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label11.Location = new System.Drawing.Point(616, 82);
+            this.label11.Location = new System.Drawing.Point(416, 122);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 16);
             this.label11.TabIndex = 149;
@@ -305,16 +307,16 @@
             // 
             this.cboBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cboBase.FormattingEnabled = true;
-            this.cboBase.Location = new System.Drawing.Point(495, 79);
+            this.cboBase.Location = new System.Drawing.Point(178, 119);
             this.cboBase.Name = "cboBase";
-            this.cboBase.Size = new System.Drawing.Size(115, 24);
+            this.cboBase.Size = new System.Drawing.Size(200, 24);
             this.cboBase.TabIndex = 148;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label9.Location = new System.Drawing.Point(440, 82);
+            this.label9.Location = new System.Drawing.Point(111, 122);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 16);
             this.label9.TabIndex = 147;
@@ -326,7 +328,7 @@
             this.cboOwner.FormattingEnabled = true;
             this.cboOwner.Location = new System.Drawing.Point(178, 79);
             this.cboOwner.Name = "cboOwner";
-            this.cboOwner.Size = new System.Drawing.Size(234, 24);
+            this.cboOwner.Size = new System.Drawing.Size(200, 24);
             this.cboOwner.TabIndex = 139;
             // 
             // label5
@@ -362,6 +364,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cboDepartment);
+            this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtAssetMovementId);
             this.groupBox2.Controls.Add(this.cboStatus);
@@ -443,6 +447,25 @@
             this.label15.TabIndex = 157;
             this.label15.Text = "Computer Name :";
             // 
+            // cboDepartment
+            // 
+            this.cboDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cboDepartment.FormattingEnabled = true;
+            this.cboDepartment.Location = new System.Drawing.Point(490, 82);
+            this.cboDepartment.Name = "cboDepartment";
+            this.cboDepartment.Size = new System.Drawing.Size(259, 24);
+            this.cboDepartment.TabIndex = 155;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label16.Location = new System.Drawing.Point(397, 82);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(87, 16);
+            this.label16.TabIndex = 154;
+            this.label16.Text = "Department  :";
+            // 
             // CreateAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,5 +530,7 @@
         private System.Windows.Forms.TextBox txtcomputerName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cboDepartment;
+        private System.Windows.Forms.Label label16;
     }
 }
