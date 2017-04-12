@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserLogin));
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
+            this.Create_User_Btn = new System.Windows.Forms.ToolStripButton();
+            this.Clear_User_Btn = new System.Windows.Forms.ToolStripButton();
             this.txt_Create_Reenter_Password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Create_Password = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@
             this.txt_Create_Employee_ID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Create_User_Btn = new System.Windows.Forms.ToolStripButton();
-            this.Clear_User_Btn = new System.Windows.Forms.ToolStripButton();
             this.Toolstrip_Create_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,25 @@
             this.Toolstrip_Create_User.Size = new System.Drawing.Size(984, 39);
             this.Toolstrip_Create_User.TabIndex = 7;
             this.Toolstrip_Create_User.Text = "toolStrip2";
+            // 
+            // Create_User_Btn
+            // 
+            this.Create_User_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Create_User_Btn.Image = ((System.Drawing.Image)(resources.GetObject("Create_User_Btn.Image")));
+            this.Create_User_Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Create_User_Btn.Name = "Create_User_Btn";
+            this.Create_User_Btn.Size = new System.Drawing.Size(124, 36);
+            this.Create_User_Btn.Text = "Create User";
+            this.Create_User_Btn.Click += new System.EventHandler(this.Create_User_Btn_Click);
+            // 
+            // Clear_User_Btn
+            // 
+            this.Clear_User_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_User_Btn.Image = ((System.Drawing.Image)(resources.GetObject("Clear_User_Btn.Image")));
+            this.Clear_User_Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Clear_User_Btn.Name = "Clear_User_Btn";
+            this.Clear_User_Btn.Size = new System.Drawing.Size(114, 36);
+            this.Clear_User_Btn.Text = "Clear Data";
             // 
             // txt_Create_Reenter_Password
             // 
@@ -131,25 +150,6 @@
             this.pictureBox1.TabIndex = 146;
             this.pictureBox1.TabStop = false;
             // 
-            // Create_User_Btn
-            // 
-            this.Create_User_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Create_User_Btn.Image = ((System.Drawing.Image)(resources.GetObject("Create_User_Btn.Image")));
-            this.Create_User_Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Create_User_Btn.Name = "Create_User_Btn";
-            this.Create_User_Btn.Size = new System.Drawing.Size(124, 36);
-            this.Create_User_Btn.Text = "Create User";
-            this.Create_User_Btn.Click += new System.EventHandler(this.Create_User_Btn_Click);
-            // 
-            // Clear_User_Btn
-            // 
-            this.Clear_User_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_User_Btn.Image = ((System.Drawing.Image)(resources.GetObject("Clear_User_Btn.Image")));
-            this.Clear_User_Btn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Clear_User_Btn.Name = "Clear_User_Btn";
-            this.Clear_User_Btn.Size = new System.Drawing.Size(114, 36);
-            this.Clear_User_Btn.Text = "Clear Data";
-            // 
             // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +163,7 @@
             this.Controls.Add(this.txt_Create_Employee_ID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Toolstrip_Create_User);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserLogin";
