@@ -88,3 +88,6 @@ D:\20161122\Asset_Project\Project7\trunk\WindowsFormsApplication1\obj\Debug\Wind
 D:\20161122\Asset_Project\Project7\trunk\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Login.resources
 D:\20161122\Asset_Project\Project7\trunk\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\20161122\Asset_Project\Project7\trunk\WindowsFormsApplication1\obj\Debug\Asset.csproj.GenerateResource.Cache
+D:\20161122\Asset_Project\Project9\trunk\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\20161122\Asset_Project\Project9\trunk\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\20161122\Asset_Project\Project9\trunk\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
