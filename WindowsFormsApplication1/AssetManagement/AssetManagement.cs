@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1.AssetManagement
         StringBuilder Sbd;
         SqlDataReader Sdr;
         SqlTransaction Tr;
+
         string userId;
         string AssetId;
         int CheckResult;
@@ -241,6 +242,68 @@ namespace WindowsFormsApplication1.AssetManagement
         private void EditAsset_Btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+
+                if (txtSearch.Text.Trim() == "")
+                {
+                    return;
+                }
+                string strSearchCustomer = txtSearch.Text.Trim();
+                Sbd = new StringBuilder();
+                Sbd.Remove(0, Sbd.Length);
+                Sbd.Append("SELECT A.Asset_No_System,A.Asset_No,A.Fixed_Asset_No, ");
+                Sbd.Append("(E2.Employee_FirstName+'  ' +E2.Employee_LastName) AS Owner,");
+                Sbd.Append("E2.Dep_ID AS Dept,A.Location,A.Base,");
+                Sbd.Append("A.Asset_Details,T.Asset_TypeName,A.Asset_Brand,");
+                Sbd.Append("A.Asset_Purchase,S.Status_Name,A.Asste_Expire_Date,");
+                Sbd.Append("A.ComputerName,A.KasperskyVersion,");
+                Sbd.Append("(E.Employee_FirstName+'  ' +E.Employee_LastName) AS CreateBy,");
+                Sbd.Append("A.Create_Date,");
+                Sbd.Append("(E1.Employee_FirstName+'  ' +E1.Employee_LastName) AS Modified_By,");
+                Sbd.Append("A.Modified_Date,A.Amend ");
+                Sbd.Append("FROM Asset A INNER JOIN Asset_Type  T ");
+                Sbd.Append("ON A.Asset_Type = T.Asset_Type_ID LEFT JOIN Employee E ");
+                Sbd.Append("ON A.Create_By = E.Employee_ID LEFT JOIN Employee E1 ");
+                Sbd.Append("ON A.Create_By = E1.Employee_ID LEFT JOIN Status S ");
+                Sbd.Append("ON A.Asset_Status = S.Status_Id INNER JOIN Employee E2 ");
+                Sbd.Append("ON A.Owner = E2.Employee_ID ");
+                Sbd.Append("WHERE A.Asset_No LIKE @Search OR A.Fixed_Asset_No LIKE @Search ");
+
+
+                string sqlProduct = Sbd.ToString();
+                Cmd = new SqlCommand();
+                Cmd.Parameters.Clear();
+                Cmd.Parameters.Add("@Search", SqlDbType.NVarChar).Value = "%" + txtSearch.Text.Trim() + "%";
+                Cmd.CommandText = sqlProduct;
+                Cmd.CommandType = CommandType.Text;
+                Cmd.Connection = Conn;
+
+
+                Sdr = Cmd.ExecuteReader();
+                if (Sdr.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(Sdr);
+                    dgv_ViewAsset.DataSource = dt;
+                    HeadData();
+                }
+                else
+                {
+                    dgv_ViewAsset.DataSource = null;
+
+                }
+                Sdr.Close();
+
+            
+
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            ShowAsset();
         }
     }
 }

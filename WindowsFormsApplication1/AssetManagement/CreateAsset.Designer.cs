@@ -57,14 +57,14 @@
             this.Toolstrip_Create_User = new System.Windows.Forms.ToolStrip();
             this.CreateAsset_Btn = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboDepartment = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtAssetMovementId = new System.Windows.Forms.TextBox();
             this.txtKasperskyVersion = new System.Windows.Forms.TextBox();
             this.txtcomputerName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.cboDepartment = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Toolstrip_Create_User.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -384,6 +384,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Asset Location";
             // 
+            // cboDepartment
+            // 
+            this.cboDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cboDepartment.FormattingEnabled = true;
+            this.cboDepartment.Location = new System.Drawing.Point(490, 82);
+            this.cboDepartment.Name = "cboDepartment";
+            this.cboDepartment.Size = new System.Drawing.Size(259, 24);
+            this.cboDepartment.TabIndex = 155;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label16.Location = new System.Drawing.Point(397, 82);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(87, 16);
+            this.label16.TabIndex = 154;
+            this.label16.Text = "Department  :";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -446,25 +465,6 @@
             this.label15.Size = new System.Drawing.Size(112, 16);
             this.label15.TabIndex = 157;
             this.label15.Text = "Computer Name :";
-            // 
-            // cboDepartment
-            // 
-            this.cboDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cboDepartment.FormattingEnabled = true;
-            this.cboDepartment.Location = new System.Drawing.Point(490, 82);
-            this.cboDepartment.Name = "cboDepartment";
-            this.cboDepartment.Size = new System.Drawing.Size(259, 24);
-            this.cboDepartment.TabIndex = 155;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label16.Location = new System.Drawing.Point(397, 82);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(87, 16);
-            this.label16.TabIndex = 154;
-            this.label16.Text = "Department  :";
             // 
             // CreateAsset
             // 
