@@ -69,6 +69,7 @@
             this.EditAsset_Btn.Name = "EditAsset_Btn";
             this.EditAsset_Btn.Size = new System.Drawing.Size(110, 36);
             this.EditAsset_Btn.Text = "Edit Asset";
+            this.EditAsset_Btn.Click += new System.EventHandler(this.EditAsset_Btn_Click);
             // 
             // toolStripButton1
             // 

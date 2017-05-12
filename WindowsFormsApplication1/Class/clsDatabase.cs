@@ -193,11 +193,11 @@ namespace WindowsFormsApplication1.Class
 
         public Boolean IsConnected()
         {
-            if (IsServer() == false)
+            /*if (IsServer() == false)
             {
                 MessageBox.Show("ไม่พบ Server !!!", "Server ผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
-            }
+            }*/
             try
             {
                 objConn = new SqlConnection();

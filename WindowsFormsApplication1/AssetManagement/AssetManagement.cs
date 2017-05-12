@@ -82,11 +82,13 @@ namespace WindowsFormsApplication1.AssetManagement
                 dgv_ViewAsset.Columns[10].HeaderText = "Purchase Date";
                 dgv_ViewAsset.Columns[11].HeaderText = "Status";
                 dgv_ViewAsset.Columns[12].HeaderText = "Expire Date";
-                dgv_ViewAsset.Columns[13].HeaderText = "Created By";
-                dgv_ViewAsset.Columns[14].HeaderText = "Created Date";
-                dgv_ViewAsset.Columns[15].HeaderText = "Modified By";
-                dgv_ViewAsset.Columns[16].HeaderText = "Modified Date";
-                dgv_ViewAsset.Columns[17].HeaderText = "Amend";
+                dgv_ViewAsset.Columns[13].HeaderText = "Computer Name";
+                dgv_ViewAsset.Columns[14].HeaderText = "Kaspersky Version";
+                dgv_ViewAsset.Columns[15].HeaderText = "Created By";
+                dgv_ViewAsset.Columns[16].HeaderText = "Created Date";
+                dgv_ViewAsset.Columns[17].HeaderText = "Modified By";
+                dgv_ViewAsset.Columns[18].HeaderText = "Modified Date";
+                dgv_ViewAsset.Columns[19].HeaderText = "Amend";
 
 
                 FixColumnWidthdgvHead();
@@ -94,7 +96,7 @@ namespace WindowsFormsApplication1.AssetManagement
                 dgv_ViewAsset.Columns[10].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
                 dgv_ViewAsset.Columns[12].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
                 dgv_ViewAsset.Columns[16].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
-                dgv_ViewAsset.Columns[14].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
+                dgv_ViewAsset.Columns[18].DefaultCellStyle.Format = ("dd/MM/yyyy HH:mm:ss");
 
             }
         }
@@ -118,7 +120,9 @@ namespace WindowsFormsApplication1.AssetManagement
             dgv_ViewAsset.Columns[14].Width = 100;
             dgv_ViewAsset.Columns[15].Width = 100;
             dgv_ViewAsset.Columns[16].Width = 100;
-            dgv_ViewAsset.Columns[17].Width = 50;
+            dgv_ViewAsset.Columns[17].Width = 100;
+            dgv_ViewAsset.Columns[18].Width = 100;
+            dgv_ViewAsset.Columns[19].Width = 50;
             
         }
 
@@ -231,6 +235,11 @@ namespace WindowsFormsApplication1.AssetManagement
                 return;
             }
             strAssetMovementId = dgv_ViewAssetMovement.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+        }
+
+        private void EditAsset_Btn_Click(object sender, EventArgs e)
+        {
 
         }
     }

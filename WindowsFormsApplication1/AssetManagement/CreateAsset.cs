@@ -255,6 +255,8 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("Base,");
                     Sbd.Append("Location,");
                     Sbd.Append("Owner,");
+                    Sbd.Append("ComputerName,");
+                    Sbd.Append("KasperskyVersion,");
                     Sbd.Append("Amend)");
 
 
@@ -277,6 +279,8 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("@Base,");
                     Sbd.Append("@Location,");
                     Sbd.Append("@Owner,");
+                    Sbd.Append("@ComputerName,");
+                    Sbd.Append("@KasperskyVersion,");
                     Sbd.Append("@Amend)");
                     sqlSaveStHead = Sbd.ToString();
 
@@ -307,6 +311,8 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.Parameters.Add("@Owner", SqlDbType.NChar).Value = cboOwner.SelectedValue.ToString();
                     Cmd.Parameters.Add("@Base", SqlDbType.NChar).Value = cboBase.SelectedValue.ToString();
                     Cmd.Parameters.Add("@Location", SqlDbType.NChar).Value = cboLocation.SelectedValue.ToString();
+                    Cmd.Parameters.Add("@ComputerName", SqlDbType.NVarChar).Value = txtcomputerName.Text.Trim();
+                    Cmd.Parameters.Add("@KasperskyVersion", SqlDbType.NVarChar).Value = txtKasperskyVersion.Text.Trim();
 
                     Cmd.ExecuteNonQuery();
 

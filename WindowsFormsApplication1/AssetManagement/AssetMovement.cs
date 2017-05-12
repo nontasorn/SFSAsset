@@ -92,6 +92,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("To_Base,");
                     Sbd.Append("To_Location,");
                     Sbd.Append("To_Status,");
+                    Sbd.Append("RequestBy,");
                     Sbd.Append("Asste_Move_RunId) ");
 
                     Sbd.Append("VALUES ");
@@ -111,6 +112,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Sbd.Append("@To_Base,");
                     Sbd.Append("@To_Location,");
                     Sbd.Append("@To_Status,");
+                    Sbd.Append("@RequestBy,");
                     Sbd.Append("@Asste_Move_RunId) ");
                     sqlSaveStHead = Sbd.ToString();
 
@@ -134,6 +136,7 @@ namespace WindowsFormsApplication1.AssetManagement
                     Cmd.Parameters.Add("@MovementDate", SqlDbType.DateTime).Value = DateTime.Now;
                     Cmd.Parameters.Add("@Movement_By", SqlDbType.NChar).Value = userId;
                     Cmd.Parameters.Add("@Asste_Move_RunId", SqlDbType.Int).Value = AssetMovementId;
+                    Cmd.Parameters.Add("@RequestBy", SqlDbType.NChar).Value = cboRequestBy.SelectedValue.ToString();  
                     Cmd.ExecuteNonQuery();
 
 
@@ -182,6 +185,7 @@ namespace WindowsFormsApplication1.AssetManagement
             cmb_Location();
             cmb_Status();
             cmb_OWNER();
+            cmb_RequestBy();
             txt_Sys_Asset.Text = AssetId;
             Max_Asset_Movement();
         }
@@ -303,6 +307,36 @@ namespace WindowsFormsApplication1.AssetManagement
                 cboOwner.DataSource = dtUser;
                 cboOwner.EndUpdate();
                 cboOwner.SelectedIndex = 0;
+
+            }
+            Sdr.Close();
+        }
+        private void cmb_RequestBy()
+        {
+            Sbd = new StringBuilder();
+            Sbd.Remove(0, Sbd.Length);
+
+            Sbd.Append("SELECT Employee_ID,(Employee_FirstName+'  '+Employee_LastName) AS OWNER FROM Employee");
+
+            string sqlIni = Sbd.ToString();
+            Cmd = new SqlCommand();
+
+            Cmd.CommandText = sqlIni;
+            Cmd.CommandType = CommandType.Text;
+            Cmd.Connection = Conn;
+            Sdr = Cmd.ExecuteReader();
+
+            if (Sdr.HasRows)
+            {
+                DataTable dtUser = new DataTable();
+                dtUser.Load(Sdr);
+
+                cboRequestBy.BeginUpdate();
+                cboRequestBy.DisplayMember = "OWNER";
+                cboRequestBy.ValueMember = "Employee_ID";
+                cboRequestBy.DataSource = dtUser;
+                cboRequestBy.EndUpdate();
+                cboRequestBy.SelectedIndex = 0;
 
             }
             Sdr.Close();
